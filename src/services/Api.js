@@ -2,7 +2,7 @@ import { browser } from "$app/env";
 import axios from "axios";
 
 const axiosAPI = axios.create({
-  baseURL : "http://127.0.0.1:8000/api/",
+  baseURL : "http://178.62.37.108/api/",
 });
 let token = '';
 if(browser){
