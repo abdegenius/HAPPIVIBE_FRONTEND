@@ -2,7 +2,7 @@ import { browser } from "$app/env";
 import axios from "axios";
 
 const axiosAPI = axios.create({
-  baseURL : "https://www.happivibes-backend.com/api/",
+  baseURL : "https://happivibes-backend.com/api/",
 });
 let token = '';
 if(browser){
