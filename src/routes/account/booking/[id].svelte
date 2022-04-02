@@ -1,6 +1,6 @@
 <script>
     import API from "../../../services/Api"
-    import CURRENCY from "../../../services/Helper"
+    import {CURRENCY} from "../../../services/Helper"
     import {onMount} from "svelte"
     import { page } from '$app/stores';
 
@@ -39,7 +39,7 @@
                         <b class="text-black text-md font-semibold">Fullname: </b>
                     </div>
                     <div class="">
-                        <b class="text-gray-800 text-md font-normal capitalize">{booking.salutation+" "+booking.firstname+" "+booking.lastname} </b>
+                        <b class="text-gray-800 text-md font-normal capitalize">{booking.their_salutation+" "+booking.their_firstname+" "+booking.their_lastname} </b>
                     </div>
                 </li>
                 <li class="py-4 border-b-2 border-gray-100 flex justify-start items-start">
@@ -47,7 +47,7 @@
                         <b class="text-black text-md font-semibold">Phone No: </b>
                     </div>
                     <div class="">
-                        <b class="text-gray-800 text-md font-normal">{booking.phone} </b>
+                        <b class="text-gray-800 text-md font-normal">{booking.their_phone} </b>
                     </div>
                 </li>
                 <li class="py-4 border-b-2 border-gray-100 flex justify-start items-start">
@@ -55,7 +55,7 @@
                         <b class="text-black text-md font-semibold">Location: </b>
                     </div>
                     <div class="">
-                        <b class="text-gray-800 text-md font-normal capitalize">{booking.location} </b>
+                        <b class="text-gray-800 text-md font-normal capitalize">{booking.their_location} </b>
                     </div>
                 </li>
                 <li class="py-4 border-b-2 border-gray-100 flex justify-start items-start">
@@ -63,7 +63,7 @@
                         <b class="text-black text-md font-semibold">Country: </b>
                     </div>
                     <div class="">
-                        <b class="text-gray-800 text-md font-normal capitalize">{booking.country} </b>
+                        <b class="text-gray-800 text-md font-normal capitalize">{booking.their_country} </b>
                     </div>
                 </li>
                 <li class="py-4 border-b-2 border-gray-100 flex justify-start items-start">
@@ -71,7 +71,7 @@
                         <b class="text-black text-md font-semibold">Gender: </b>
                     </div>
                     <div class="">
-                        <b class="text-gray-800 text-md font-normal capitalize">{booking.gender} </b>
+                        <b class="text-gray-800 text-md font-normal capitalize">{booking.their_gender} </b>
                     </div>
                 </li>
                 <li class="py-4 border-b-2 border-gray-100 flex justify-start items-start">
@@ -79,7 +79,7 @@
                         <b class="text-black text-md font-semibold">Marital Status: </b>
                     </div>
                     <div class="">
-                        <b class="text-gray-800 text-md font-normal capitalize">{booking.marital_status} </b>
+                        <b class="text-gray-800 text-md font-normal capitalize">{booking.their_marital_status} </b>
                     </div>
                 </li>
                 <li class="py-4 border-b-2 border-gray-100 flex justify-start items-start">
@@ -176,6 +176,22 @@
                     </div>
                     <div class="">
                         <b class="text-gray-800 text-md font-normal capitalize">{booking.how_did_you_hear_about_happivibe} </b>
+                    </div>
+                </li>
+                <li class="py-4 border-b-2 border-gray-100 flex justify-start items-start">
+                    <div class="mr-2">
+                        <b class="text-black text-md font-semibold">Memories: </b>
+                    </div>
+                    <div class="">
+                        <b class="text-gray-800 text-md font-normal capitalize">{booking.memories} </b>
+                    </div>
+                </li>
+                <li class="py-4 border-b-2 border-gray-100 flex justify-start items-start">
+                    <div class="mr-2">
+                        <b class="text-black text-md font-semibold">What You Want To Say: </b>
+                    </div>
+                    <div class="">
+                        <b class="text-gray-800 text-md font-normal capitalize">{booking.what_you_want_to_say} </b>
                     </div>
                 </li>
             </ul>

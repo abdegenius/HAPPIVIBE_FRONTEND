@@ -1,6 +1,6 @@
 <script>
     import API from "../../services/Api"
-    import CURRENCY from "../../services/Helper"
+    import {CURRENCY} from "../../services/Helper"
     import {onMount} from "svelte"
 
     const BOOKINGS = async () => {
@@ -83,7 +83,7 @@
 				</div>
 				<div class="w-[150px] md:w-1/6 mr-6">
 					<span class="text-gray-600 capitalize font-medium text-[12px] md:text-sm xl:text-lg"
-						>{booking.firstname+" "+booking.lastname}</span
+						>{booking.their_firstname+" "+booking.their_lastname}</span
 					>
 				</div>
 				<div class="w-[150px] md:w-1/6 mr-6">

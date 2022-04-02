@@ -1,6 +1,6 @@
 <script>
     import API from "../../services/Api"
-    import CURRENCY from "../../services/Helper"
+    import { CURRENCY } from "../../services/Helper";
     import {onMount} from "svelte"
     const DASHBOARD = async () => {
 		let execute = API.get('dashboard');
@@ -17,22 +17,22 @@
 
         <div class="bg-white drop-shadow-md rounded-md shadow-sm p-6 w-full h-auto">
             <h3 class="text-xl font-bold text-gray-400 text-center mb-4">Active Bookings</h3>
-            <h1 class="text-3xl font-black text-green-600 text-center mb-4">{dashboard.active_booking}</h1>
+            <h1 class="text-3xl font-light text-green-600 text-center mb-4">{dashboard.active_booking}</h1>
         </div>
 
         <div class="bg-white drop-shadow-md rounded-md shadow-sm p-6 w-full h-auto">
             <h3 class="text-xl font-bold text-gray-400 text-center mb-4">Total Bookings</h3>
-            <h1 class="text-3xl font-black text-gray-800 text-center mb-4">{dashboard.total_booking}</h1>
+            <h1 class="text-3xl font-light text-gray-800 text-center mb-4">{dashboard.total_booking}</h1>
         </div>
 
         <div class="bg-white drop-shadow-md rounded-md shadow-sm p-6 w-full h-auto">
             <h3 class="text-xl font-bold text-gray-400 text-center mb-4">Wallet Balance</h3>
-            <h1 class="text-3xl font-black text-gray-800 text-center mb-4">{CURRENCY(dashboard.account_balance)}</h1>
+            <h1 class="text-3xl font-light text-gray-800 text-center mb-4">{CURRENCY(dashboard.account_balance)}</h1>
         </div>
 
         <div class="bg-white drop-shadow-md rounded-md shadow-sm p-6 w-full h-auto">
             <h3 class="text-xl font-bold text-gray-400 text-center mb-4">Referral Balance</h3>
-            <h1 class="text-3xl font-black text-gray-800 text-center mb-4">{CURRENCY(dashboard.referral_balance)}</h1>
+            <h1 class="text-3xl font-light text-gray-800 text-center mb-4">{CURRENCY(dashboard.referral_balance)}</h1>
         </div>
 
     </div>

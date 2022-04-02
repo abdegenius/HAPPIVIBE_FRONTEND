@@ -1,6 +1,5 @@
 <script>
     import API from "../../services/Api"
-    import CURRENCY from "../../services/Helper"
     import {onMount} from "svelte"
     
     const PROFILE = async () => {

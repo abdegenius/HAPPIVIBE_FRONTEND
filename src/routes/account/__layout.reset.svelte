@@ -66,7 +66,7 @@
 						<div class="flex justify-end items-center mb-4">
 							<div class="flex justify-start items-center">
 								<div class="mx-6">
-									<span class="font-semibold text-xl text-gray-600">{$USER.fullname}</span>
+									<span class="font-light text-xl text-gray-600">{$USER.fullname}</span>
 								</div>
 								<div class="w-16 h-16 border border-gray-400 rounded-full p-1">
 									<img src="https://avatars.dicebear.com/api/adventurer-neutral/{$USER.fullname}.svg" class="w-full h-full rounded-full" alt="avatar" />
@@ -95,24 +95,24 @@
 		<div class="mt-24 flex justify-center items-center">
 			<ul class="p-4">
 				<li class="flex justify-center items-start mb-12">
-					<a on:click={MENU_CLOSE} href="/account" class="block text-center text-gray-100 font-semibold text-3xl">Overview</a>
+					<a on:click={MENU_CLOSE} href="/account" class="block text-center text-gray-100 font-light text-3xl">Overview</a>
 				</li>
 				<li class="flex justify-center items-start mb-12">
-					<a on:click={MENU_CLOSE} href="/account/bookings" class="block text-center text-gray-100 font-semibold text-3xl">Bookings</a>
+					<a on:click={MENU_CLOSE} href="/account/bookings" class="block text-center text-gray-100 font-light text-3xl">Bookings</a>
 				</li>
 				<li class="flex justify-center items-start mb-12">
-					<a on:click={MENU_CLOSE} href="/account/wallet" class="block text-center text-gray-100 font-semibold text-3xl">Wallet</a>
+					<a on:click={MENU_CLOSE} href="/account/wallet" class="block text-center text-gray-100 font-light text-3xl">Wallet</a>
 				</li>
 				<li class="flex justify-center items-start mb-12">
-					<a on:click={MENU_CLOSE} href="/account/referrals" class="block text-center text-gray-100 font-semibold text-3xl">Referrals</a>
+					<a on:click={MENU_CLOSE} href="/account/referrals" class="block text-center text-gray-100 font-light text-3xl">Referrals</a>
 				</li>
 				<li class="flex justify-center items-start mb-12">
-					<a on:click={MENU_CLOSE} href="/account/profile" class="block text-center text-gray-100 font-semibold text-3xl">Profile</a>
+					<a on:click={MENU_CLOSE} href="/account/profile" class="block text-center text-gray-100 font-light text-3xl">Profile</a>
 				</li>
 			</ul>
 		</div>
 		<div
-			class="bottom-0 mb-8 mx-auto text-center text-orange-400 font-semibold text-3xl pt-4 border-t-4 border-white cursor-pointer"
+			class="bottom-0 mb-8 mx-auto text-center text-orange-400 font-light text-3xl pt-4 border-t-4 border-white cursor-pointer"
 			on:click={MENU_CLOSE}
 		>
 			Close

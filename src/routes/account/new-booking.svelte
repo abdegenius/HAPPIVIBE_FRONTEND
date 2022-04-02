@@ -1,16 +1,30 @@
 <script>
 	import { browser } from '$app/env';
-	import API from "../../services/Api"
+	import API from '../../services/Api';
 	import Notiflix from 'notiflix';
-
-	let firstname = '';
-	let lastname = '';
-	let gender = '';
-	let phone = '';
-	let country = '';
-	let location = '';
-	let salutation = '';
-	let marital_status = '';
+	import { FIRST, SECOND, THIRD } from '../../services/Helper';
+	import { USER } from '../../services/Store';
+	let fullname = '';
+	if (browser) {
+		let fname = $USER.fullname;
+		fullname = fname.split(' ');
+	}
+	let your_firstname = fullname.length > 0 ? fullname[0] : '';
+	let your_lastname = fullname.length > 1 ? fullname[1] : '';
+	let your_gender = $USER.gender;
+	let your_phone = $USER.phone;
+	let your_country = $USER.country;
+	let your_location = $USER.location;
+	let your_salutation = $USER.salutation;
+	let your_marital_status = $USER.marital_status;
+	let their_firstname = '';
+	let their_lastname = '';
+	let their_gender = '';
+	let their_phone = '';
+	let their_country = '';
+	let their_location = '';
+	let their_salutation = '';
+	let their_marital_status = '';
 	let nature_of_call = '';
 	let their_relationship_with_you = '';
 	let name_they_know_you_with = '';
@@ -18,105 +32,30 @@
 	let name_you_call_them = '';
 	let native_language = '';
 	let favorite_song = '';
+	let memories = '';
+	let what_you_want_to_say = '';
 	let how_did_you_hear_about_happivibe = '';
 	let date_to_make_call = '';
 	let time_to_make_call = '';
-		
-		
-		
-	const NEXT = (e) => {
+	const SAVE_BOOKING = async (e) => {
 		e.preventDefault();
-
-		if(firstname == ''){
-			if(browser){
-				Notiflix.Report.failure("Field Required", "Firstname is required", "Fix")
-			}
-		}
-		else if(lastname == ''){
-			if(browser){
-				Notiflix.Report.failure("Field Required", "Lastname is required", "Fix")
-			}
-		}
-		else if(phone == ''){
-			if(browser){
-				Notiflix.Report.failure("Field Required", "Phone is required", "Fix")
-			}
-		}
-		else if(location == ''){
-			if(browser){
-				Notiflix.Report.failure("Field Required", "Location is required", "Fix")
-			}
-		}
-		else{
-			document.getElementById('first').style.display = 'none';
-			document.getElementById('second').style.display = 'block';
-			document.getElementById('third').style.display = 'none';
-			if(document.getElementById('secondTab').classList.contains("border-gray-200")){
-				document.getElementById('firstTab').classList.replace(active, inactive);
-				document.getElementById('secondTab').classList.replace(inactive, active);
-				document.getElementById('thirdTab').classList.replace(active, inactive);
-			}
-		}
-	};
-	const FINAL = (e) => {
-		e.preventDefault();
-		document.getElementById('first').style.display = 'none';
-		document.getElementById('second').style.display = 'none';
-		document.getElementById('third').style.display = 'block';
-        if(document.getElementById('thirdTab').classList.contains("border-gray-200")){
-			document.getElementById('firstTab').classList.replace(active, inactive);
-			document.getElementById('secondTab').classList.replace(active, inactive);
-			document.getElementById('thirdTab').classList.replace(inactive, active);
-		}
-	};
-	let active = 'border-orange-400'
-	let inactive = 'border-gray-200'
-    const FIRST = (e) => {
-		e.preventDefault();
-		document.getElementById('first').style.display = 'block';
-		document.getElementById('second').style.display = 'none';
-		document.getElementById('third').style.display = 'none';
-		if(document.getElementById('firstTab').classList.contains("border-gray-200")){
-			document.getElementById('firstTab').classList.replace(inactive, active);
-			document.getElementById('secondTab').classList.replace(active, inactive);
-			document.getElementById('thirdTab').classList.replace(active, inactive);
-		}
-	};
-    const SECOND = (e) => {
-		e.preventDefault();
-		document.getElementById('first').style.display = 'none';
-		document.getElementById('second').style.display = 'block';
-		document.getElementById('third').style.display = 'none';
-        if(document.getElementById('secondTab').classList.contains("border-gray-200")){
-			document.getElementById('firstTab').classList.replace(active, inactive);
-			document.getElementById('secondTab').classList.replace(inactive, active);
-			document.getElementById('thirdTab').classList.replace(active, inactive);
-		}
-	};
-    const THIRD = (e) => {
-		e.preventDefault();
-		document.getElementById('first').style.display = 'none';
-		document.getElementById('second').style.display = 'none';
-		document.getElementById('third').style.display = 'block';
-        if(document.getElementById('thirdTab').classList.contains("border-gray-200")){
-			document.getElementById('firstTab').classList.replace(active, inactive);
-			document.getElementById('secondTab').classList.replace(active, inactive);
-			document.getElementById('thirdTab').classList.replace(inactive, active);
-		}
-	};
-	
-
-	const SAVE_BOOKING = (async(e) => {
-		e.preventDefault();
-		const execute = await API.post("add-booking", {
-			firstname,
-			lastname,
-			gender,
-			phone,
-			country,
-			location,
-			salutation,
-			marital_status,
+		const execute = await API.post('add-booking', {
+			your_firstname,
+			your_lastname,
+			your_gender,
+			your_phone,
+			your_country,
+			your_location,
+			your_salutation,
+			your_marital_status,
+			their_firstname,
+			their_lastname,
+			their_gender,
+			their_phone,
+			their_country,
+			their_location,
+			their_salutation,
+			their_marital_status,
 			nature_of_call,
 			their_relationship_with_you,
 			name_they_know_you_with,
@@ -124,21 +63,26 @@
 			name_you_call_them,
 			native_language,
 			favorite_song,
+			memories,
+			what_you_want_to_say,
 			how_did_you_hear_about_happivibe,
 			date_to_make_call,
 			time_to_make_call
-		})
+		});
 
-		if(execute.error == false){
-			Notiflix.Report.success("Successful", "Hurray! Booking form filled successfully.. ", "Next")
-			if(browser){
-				window.location.assign('/account/chat/'+execute.data[1].id)
+		if (execute.error == false) {
+			Notiflix.Report.success('Successful', 'Hurray! Booking form filled successfully.. ', 'Next');
+			if (browser) {
+				window.location.assign('/account/chat/' + execute.data[1].id);
 			}
+		} else {
+			Notiflix.Report.failure(
+				'Failed',
+				'Unable to complete booking an error occurred please fill all the provided inputs',
+				'Ok'
+			);
 		}
-		else{
-			Notiflix.Report.failure("Failed", "Unable to complete booking an error occurred please fill all the provided inputs","Ok")
-		}
-	})
+	};
 </script>
 
 <div class="space-x-10 flex flex-wrap justify-start items-center mt-12">
@@ -159,33 +103,33 @@
 			<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
 				<div class="mb-4">
 					<label for="firstname" class="block text-gray-800 font-semibold text-sm uppercase mb-2"
-						>First Name</label
+						>Their First Name</label
 					>
 					<input
 						type="text"
 						id="firstname"
-						bind:value={firstname}
+						bind:value={their_firstname}
 						class="bg-white outline-none appearance-none w-full border-2 border-gray-100 rounded-lg p-4 text-gray-600 font-normal text-md shadow-md"
 					/>
 				</div>
 				<div class="mb-4">
 					<label for="lastname" class="block text-gray-800 font-semibold text-sm uppercase mb-2"
-						>Last Name</label
+						>Their Last Name</label
 					>
 					<input
 						type="text"
 						id="lastname"
-						bind:value={lastname}
+						bind:value={their_lastname}
 						class="bg-white outline-none appearance-none w-full border-2 border-gray-100 rounded-lg p-4 text-gray-600 font-normal text-md shadow-md"
 					/>
 				</div>
 				<div class="mb-4">
 					<label for="gender" class="block text-gray-800 font-semibold text-sm uppercase mb-2"
-						>Gender</label
+						>Their Gender</label
 					>
 					<select
 						id="gender"
-						bind:value={gender}
+						bind:value={their_gender}
 						class="bg-white outline-none w-full border-2 border-gray-100 rounded-lg p-4 text-gray-600 font-normal text-md shadow-md"
 					>
 						<option value="Female">Female</option>
@@ -194,23 +138,23 @@
 				</div>
 				<div class="mb-4">
 					<label for="phone" class="block text-gray-800 font-semibold text-sm uppercase mb-2"
-						>Phone Number(Without Coutnry Code)</label
+						>Their Phone Number(Without Coutnry Code)</label
 					>
 					<input
 						type="text"
 						id="phone"
-						bind:value={phone}
+						bind:value={their_phone}
 						class="bg-white outline-none appearance-none w-full border-2 border-gray-100 rounded-lg p-4 text-gray-600 font-normal text-md shadow-md"
 					/>
 				</div>
 
 				<div class="mb-4">
 					<label for="country" class="block text-gray-800 font-semibold text-sm uppercase mb-2"
-						>Country</label
+						>Their Country</label
 					>
 					<select
 						id="country"
-						bind:value={country}
+						bind:value={their_country}
 						class="bg-white outline-none w-full border-2 border-gray-100 rounded-lg p-4 text-gray-600 font-normal text-md shadow-md"
 					>
 						<option value="Nigeria" selected>Nigeria</option>
@@ -219,23 +163,23 @@
 				</div>
 				<div class="mb-4">
 					<label for="location" class="block text-gray-800 font-semibold text-sm uppercase mb-2"
-						>Location</label
+						>Their Location</label
 					>
 					<input
 						type="text"
 						id="location"
-						bind:value={location}
+						bind:value={their_location}
 						class="bg-white outline-none appearance-none w-full border-2 border-gray-100 rounded-lg p-4 text-gray-600 font-normal text-md shadow-md"
 					/>
 				</div>
 
 				<div class="mb-4">
 					<label for="salutation" class="block text-gray-800 font-semibold text-sm uppercase mb-2"
-						>Salutation</label
+						>Their Salutation</label
 					>
 					<select
 						id="salutation"
-						bind:value={salutation}
+						bind:value={their_salutation}
 						class="bg-white outline-none w-full border-2 border-gray-100 rounded-lg p-4 text-gray-600 font-normal text-md shadow-md"
 					>
 						<option value="Mr">Mr</option>
@@ -250,7 +194,7 @@
 					>
 					<select
 						id="marital_status"
-						bind:value={marital_status}
+						bind:value={their_marital_status}
 						class="bg-white outline-none w-full border-2 border-gray-100 rounded-lg p-4 text-gray-600 font-normal text-md shadow-md"
 					>
 						<option value="Single">Single</option>
@@ -258,12 +202,11 @@
 					</select>
 				</div>
 			</div>
-
 			<button
 				type="button"
-				on:click={NEXT}
+				on:click={SECOND}
 				class="mt-6 bg-orange-400 text-white text-center font-bold rounded-lg p-4 md:px-12"
-				>Proceed To Next Step</button
+				>Next</button
 			>
 		</div>
 		<div id="second" class="hidden">
@@ -286,7 +229,7 @@
 					<label
 						for="their_relationship_with_you"
 						class="block text-gray-800 font-semibold text-sm uppercase mb-2"
-						>Their Relationship With You</label
+						>Their Their Relationship With You</label
 					>
 					<input
 						type="text"
@@ -361,13 +304,46 @@
 					/>
 				</div>
 			</div>
+			<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+				<div class="mb-4">
+					<label for="memories" class="block text-gray-800 font-semibold text-sm uppercase mb-2"
+						>Favorite Memory With Them</label
+					>
+					<textarea
+						rows="4"
+						id="memories"
+						bind:value={memories}
+						class="bg-white outline-none appearance-none w-full border-2 border-gray-100 rounded-lg p-4 text-gray-600 font-normal text-md shadow-md"
+					/>
+				</div>
 
-							<button
-							type="button"
-                            on:click={FINAL}
-                            class="mt-6 bg-orange-400 text-white text-center font-bold rounded-lg p-4 md:px-12"
-                            >Proceed To Final Step</button
-                        >
+				<div class="mb-4">
+					<label
+						for="what_you_want_to_say"
+						class="block text-gray-800 font-semibold text-sm uppercase mb-2"
+						>What You Want To Say</label
+					>
+					<textarea
+						rows="4"
+						id="what_you_want_to_say"
+						bind:value={what_you_want_to_say}
+						class="bg-white outline-none appearance-none w-full border-2 border-gray-100 rounded-lg p-4 text-gray-600 font-normal text-md shadow-md"
+					/>
+				</div>
+			</div>
+			<button
+				type="button"
+				on:click={FIRST}
+				class="mt-6 bg-black mr-4 text-white text-center font-bold rounded-lg p-4 md:px-12"
+				>Previous</button
+			>
+
+			<button
+				type="button"
+				on:click={THIRD}
+				class="mt-6 bg-orange-400 text-white text-center font-bold rounded-lg p-4 md:px-12"
+				>Next</button
+			>
 		</div>
 		<div id="third" class="hidden">
 			<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -413,6 +389,12 @@
 					/>
 				</div>
 			</div>
+			<button
+				type="button"
+				on:click={SECOND}
+				class="mt-6 bg-black mr-4 text-white text-center font-bold rounded-lg p-4 md:px-12"
+				>Previous</button
+			>
 
 			<button
 				type="submit"
