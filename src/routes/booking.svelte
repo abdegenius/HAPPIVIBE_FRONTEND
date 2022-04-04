@@ -85,6 +85,8 @@
 <div class="w-full bg-gray-100 min-h-screen">
 	<div class="px-8 py-24 bg-orange-400 rounded-b-3xl">
 		<h1 class="text-3xl text-white font-bold">BOOK A CALL</h1>
+		<br>
+		<a href="/" class="px-6 py-3 text-center text-white font-bold text-lg bg-black rounded-lg">Back </a>
 	</div>
 
 	<div class="mt-12 p-8 md:px-24 lg:px-32 xl:px-40">

@@ -6,7 +6,7 @@ const axiosAPI = axios.create({
 });
 let token = '';
 if(browser){
-  token = window.localStorage.getItem('token') ? `${window.localStorage.getItem('token')}` : ``
+  token = window.localStorage.getItem('token') && window.localStorage.getItem('token') != "undefined" ? `${window.localStorage.getItem('token')}` : ``
   token = token.substring(1)
   token = token.replace('"',"")
 }

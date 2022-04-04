@@ -1,13 +1,12 @@
 <script>
 	import { browser } from '$app/env';
-	import { onMount } from 'svelte'; 
-
+	import { onMount } from 'svelte';
 
 	import API from '../services/Api';
 	import { USER, TOKEN } from '../services/Store';
 
-	let password,
-		email = '';
+	let password = '';
+	let email = '';
 
 	const LOGIN = async (e) => {
 		e.preventDefault();
@@ -16,15 +15,20 @@
 			password
 		});
 		if (browser) {
-			USER.set(execute.data[0]);
-			TOKEN.set(execute.data[1]);
-			window.location.assign('/account');
+			if (execute.error == false) {
+				USER.set(execute.data[0]);
+				TOKEN.set(execute.data[1]);
+				window.location.assign('/account');
+			}
+			else{
+				window.alert(execute.message)
+			}
 		}
 	};
-
 	onMount(() => {
-		if ($TOKEN) {
-			if (browser) {
+		if (browser) {
+			let token = window.localStorage.getItem('token');
+			if (token != 'undefined' && token != undefined && token != '') {
 				window.location.assign('/account');
 			}
 		}
@@ -78,9 +82,11 @@
 				<div
 					class="md:w-[400px] w-full bg-white drop-shadow-lg rounded-lg border border-gray-300 px-6 py-24"
 				>
-				<div class="bg-green-100 p-4 rounded-lg text-green-600 font-bold text-center text-lg block w-full border-2 border-green-600 mb-8">
-					<a href="/booking">Go Straight To Booking</a>
-				</div>
+					<div
+						class="bg-green-100 p-4 rounded-lg text-green-600 font-bold text-center text-lg block w-full border-2 border-green-600 mb-8"
+					>
+						<a href="/booking">Go Straight To Booking</a>
+					</div>
 					<h1 class="text-center font-black text-2xl">Log In to Happivibe</h1>
 					<p class="text-center font-light text-sm">Enter your email and password below</p>
 
