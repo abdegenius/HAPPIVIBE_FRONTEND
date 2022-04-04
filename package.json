@@ -41,6 +41,7 @@
     "axios": "^0.26.1",
     "dotenv": "^16.0.0",
     "notiflix": "^3.2.5",
+    "svelte-hmr": "^0.14.11",
     "svelte-local-storage-store": "^0.2.6"
   }
 }
