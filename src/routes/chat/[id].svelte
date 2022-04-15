@@ -1,8 +1,8 @@
 <script>
-    import API from "../../../services/Api"
+    import API from "../../services/Api"
     import {onMount} from "svelte"
     import { page } from '$app/stores';
-import { browser } from "$app/env";
+	import { browser } from "$app/env";
 
     let chat_id = $page.params.id
     let MESSAGES = async () => {
@@ -69,14 +69,14 @@ import { browser } from "$app/env";
 			</div>
 			<div>
 				<a
-					href="/"
+					href="https://http://happivibes-backend.com/pay/{chat_id}"
 					class="text-center text-sm md:text-md font-norcmal py-2 px-4 rounded-lg text-white bg-orange-400"
 					>MAKE PAYMENT</a
 				>
 			</div>
-			<div>
+			<!-- <div>
 				<a href="/" class="font-bold text-orange-400 text-sm">EXIT CHAT</a>
-			</div>
+			</div> -->
 		</div>
 		<div class="flex justify-center items-center">
 			<div class="mx-2 lg:mx-4 bg-orange-100 p-4 rounded-lg my-4 text-gray-600 font-normal text-sm">Messages are end-to-end encrypted. No one outside of this chat, can read or listen to them.</div>

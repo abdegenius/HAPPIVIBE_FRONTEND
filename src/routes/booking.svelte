@@ -2,8 +2,64 @@
 	import { browser } from '$app/env';
 	import API from '../services/Api';
 	import Notiflix from 'notiflix';
-	import { FIRST, FOURTH, SECOND, THIRD } from '../services/Helper';
-	
+
+	let active = 'border-orange-400';
+	let inactive = 'border-gray-200';
+
+	const FIRST = (e) => {
+		e.preventDefault();
+		if (browser) {
+			document.getElementById('first').style.display = 'block';
+			document.getElementById('second').style.display = 'none';
+			document.getElementById('third').style.display = 'none';
+			document.getElementById('fourth').style.display = 'none';
+			document.getElementById('firstTab').classList.replace(inactive, active);
+			document.getElementById('secondTab').classList.replace(active, inactive);
+			document.getElementById('thirdTab').classList.replace(active, inactive);
+			document.getElementById('fourthTab').classList.replace(active, inactive);
+		}
+	};
+	const SECOND = (e) => {
+		e.preventDefault();
+		if (browser) {
+			document.getElementById('first').style.display = 'none';
+			document.getElementById('second').style.display = 'block';
+			document.getElementById('third').style.display = 'none';
+			document.getElementById('fourth').style.display = 'none';
+			document.getElementById('firstTab').classList.replace(active, inactive);
+			document.getElementById('secondTab').classList.replace(inactive, active);
+			document.getElementById('thirdTab').classList.replace(active, inactive);
+			document.getElementById('fourthTab').classList.replace(active, inactive);
+		}
+	};
+	const THIRD = (e) => {
+		e.preventDefault();
+		if (browser) {
+			document.getElementById('first').style.display = 'none';
+			document.getElementById('second').style.display = 'none';
+			document.getElementById('third').style.display = 'block';
+			document.getElementById('fourth').style.display = 'none';
+			document.getElementById('firstTab').classList.replace(active, inactive);
+			document.getElementById('secondTab').classList.replace(active, inactive);
+			document.getElementById('thirdTab').classList.replace(inactive, active);
+			document.getElementById('fourthTab').classList.replace(active, inactive);
+		}
+	};
+
+	const FOURTH = (e) => {
+		e.preventDefault();
+		if (browser) {
+			document.getElementById('first').style.display = 'none';
+			document.getElementById('second').style.display = 'none';
+			document.getElementById('third').style.display = 'none';
+			document.getElementById('fourth').style.display = 'block';
+			document.getElementById('firstTab').classList.replace(active, inactive);
+			document.getElementById('secondTab').classList.replace(active, inactive);
+			document.getElementById('thirdTab').classList.replace(active, inactive);
+			document.getElementById('fourthTab').classList.replace(inactive, active);
+		}
+	};
+
 	let your_firstname = '';
 	let your_lastname = '';
 	let your_gender = '';
@@ -69,8 +125,7 @@
 		if (execute.error == false) {
 			Notiflix.Report.success('Successful', 'Hurray! Booking form filled successfully.. ', 'Next');
 			if (browser) {
-				console.log(execute)
-				// window.location.assign('/account/chat/' + execute.data[1].id);
+				window.location.assign('/account/chat/' + execute.data[1].id);
 			}
 		} else {
 			Notiflix.Report.failure(
@@ -85,8 +140,10 @@
 <div class="w-full bg-gray-100 min-h-screen">
 	<div class="px-8 py-24 bg-orange-400 rounded-b-3xl">
 		<h1 class="text-3xl text-white font-bold">BOOK A CALL</h1>
-		<br>
-		<a href="/" class="px-6 py-3 text-center text-white font-bold text-lg bg-black rounded-lg">Back </a>
+		<br />
+		<a href="/" class="px-6 py-3 text-center text-white font-bold text-lg bg-black rounded-lg"
+			>Back
+		</a>
 	</div>
 
 	<div class="mt-12 p-8 md:px-24 lg:px-32 xl:px-40">
@@ -145,7 +202,7 @@
 					</div>
 					<div class="mb-4">
 						<label for="phone" class="block text-gray-800 font-semibold text-sm uppercase mb-2"
-							>Your Phone Number(Without Coutnry Code)</label
+							>Your Phone Number</label
 						>
 						<input
 							type="text"
@@ -164,8 +221,83 @@
 							bind:value={your_country}
 							class="bg-white outline-none w-full border-2 border-gray-100 rounded-lg p-4 text-gray-600 font-normal text-md shadow-md"
 						>
-							<option value="Nigeria" selected>Nigeria</option>
-							<option value="Ghana">Male</option>
+							<option value="78">Argentina</option>
+							<option value="79">Australia</option>
+							<option value="80">Austria</option>
+							<option value="81">Bangladesh</option>
+							<option value="82">Belgium</option>
+							<option value="83">Benin</option>
+							<option value="84">Brazil</option>
+							<option value="85">Cape Verde</option>
+							<option value="86">Cameroon</option>
+							<option value="87">Canada</option>
+							<option value="88">China</option>
+							<option value="89">Cyprus</option>
+							<option value="90">Denmark</option>
+							<option value="91">Egypt</option>
+							<option value="92">Equatorial Guinea</option>
+							<option value="93">Ethiopia</option>
+							<option value="94">Finland</option>
+							<option value="95">France</option>
+							<option value="96">Georgia</option>
+							<option value="97">Germany</option>
+							<option value="98">Ghana</option>
+							<option value="99">Greece</option>
+							<option value="100">Guinea</option>
+							<option value="101">Guinea-Bissau</option>
+							<option value="102">Hong Kong</option>
+							<option value="103">India</option>
+							<option value="104">Indonesia</option>
+							<option value="105">Iran</option>
+							<option value="106">Iraq</option>
+							<option value="107">Israel</option>
+							<option value="108">Italy</option>
+							<option value="109">Jamaica</option>
+							<option value="110">Japan</option>
+							<option value="111">Kenya</option>
+							<option value="112">Korea, South</option>
+							<option value="113">Kuwait</option>
+							<option value="114">Lebanon</option>
+							<option value="115">Liberia</option>
+							<option value="116">Libya</option>
+							<option value="117">Madagascar</option>
+							<option value="118">Malaysia</option>
+							<option value="119">Maldives</option>
+							<option value="120">Mexico</option>
+							<option value="121">Myanmar</option>
+							<option value="122">Netherlands</option>
+							<option value="123">New Zealand</option>
+							<option value="124">Niger</option>
+							<option value="125" selected>Nigeria</option>
+							<option value="126">Norway</option>
+							<option value="127">Oman</option>
+							<option value="128">Philippines</option>
+							<option value="129">Poland</option>
+							<option value="130">Portugal</option>
+							<option value="131">Qatar</option>
+							<option value="132">Romania</option>
+							<option value="133">Russia</option>
+							<option value="134">Rwanda</option>
+							<option value="135">Saudi Arabia</option>
+							<option value="136">Senegal</option>
+							<option value="137">Sierra Leone</option>
+							<option value="138">Singapore</option>
+							<option value="139">South Africa</option>
+							<option value="140">Spain</option>
+							<option value="141">Sweden</option>
+							<option value="142">Switzerland</option>
+							<option value="143">Tanzania</option>
+							<option value="144">Togo</option>
+							<option value="145">Turkey</option>
+							<option value="146">Uganda</option>
+							<option value="147">Ukraine</option>
+							<option value="148">United Arab Emirates</option>
+							<option value="149">United Kingdom</option>
+							<option value="150">United States</option>
+							<option value="151">Vietnam</option>
+							<option value="152">Zambia</option>
+							<option value="153">Zanzibar</option>
+							<option value="154">Zimbabwe</option>
 						</select>
 					</div>
 					<div class="mb-4">
@@ -190,7 +322,15 @@
 							class="bg-white outline-none w-full border-2 border-gray-100 rounded-lg p-4 text-gray-600 font-normal text-md shadow-md"
 						>
 							<option value="Mr">Mr</option>
+							<option value="Ms">Ms</option>
 							<option value="Mrs">Mrs</option>
+							<option value="Miss">Miss</option>
+							<option value="Dr">Doctor</option>
+							<option value="Sir">Sir</option>
+							<option value="Alhaji">Alhaji</option>
+							<option value="Chief">Chief</option>
+							<option value="Rev. ">Rev</option>
+							<option value="">Prefer Not To Say</option>
 						</select>
 					</div>
 
@@ -204,8 +344,9 @@
 							bind:value={your_marital_status}
 							class="bg-white outline-none w-full border-2 border-gray-100 rounded-lg p-4 text-gray-600 font-normal text-md shadow-md"
 						>
-							<option value="Single">Single</option>
-							<option value="Married">Married</option>
+							<option value="single">Single</option>
+							<option value="married">Married</option>
+							<option value="divorced">Divorced</option>
 						</select>
 					</div>
 				</div>
@@ -274,8 +415,83 @@
 							bind:value={their_country}
 							class="bg-white outline-none w-full border-2 border-gray-100 rounded-lg p-4 text-gray-600 font-normal text-md shadow-md"
 						>
-							<option value="Nigeria" selected>Nigeria</option>
-							<option value="Ghana">Male</option>
+							<option value="78">Argentina</option>
+							<option value="79">Australia</option>
+							<option value="80">Austria</option>
+							<option value="81">Bangladesh</option>
+							<option value="82">Belgium</option>
+							<option value="83">Benin</option>
+							<option value="84">Brazil</option>
+							<option value="85">Cape Verde</option>
+							<option value="86">Cameroon</option>
+							<option value="87">Canada</option>
+							<option value="88">China</option>
+							<option value="89">Cyprus</option>
+							<option value="90">Denmark</option>
+							<option value="91">Egypt</option>
+							<option value="92">Equatorial Guinea</option>
+							<option value="93">Ethiopia</option>
+							<option value="94">Finland</option>
+							<option value="95">France</option>
+							<option value="96">Georgia</option>
+							<option value="97">Germany</option>
+							<option value="98">Ghana</option>
+							<option value="99">Greece</option>
+							<option value="100">Guinea</option>
+							<option value="101">Guinea-Bissau</option>
+							<option value="102">Hong Kong</option>
+							<option value="103">India</option>
+							<option value="104">Indonesia</option>
+							<option value="105">Iran</option>
+							<option value="106">Iraq</option>
+							<option value="107">Israel</option>
+							<option value="108">Italy</option>
+							<option value="109">Jamaica</option>
+							<option value="110">Japan</option>
+							<option value="111">Kenya</option>
+							<option value="112">Korea, South</option>
+							<option value="113">Kuwait</option>
+							<option value="114">Lebanon</option>
+							<option value="115">Liberia</option>
+							<option value="116">Libya</option>
+							<option value="117">Madagascar</option>
+							<option value="118">Malaysia</option>
+							<option value="119">Maldives</option>
+							<option value="120">Mexico</option>
+							<option value="121">Myanmar</option>
+							<option value="122">Netherlands</option>
+							<option value="123">New Zealand</option>
+							<option value="124">Niger</option>
+							<option value="125" selected>Nigeria</option>
+							<option value="126">Norway</option>
+							<option value="127">Oman</option>
+							<option value="128">Philippines</option>
+							<option value="129">Poland</option>
+							<option value="130">Portugal</option>
+							<option value="131">Qatar</option>
+							<option value="132">Romania</option>
+							<option value="133">Russia</option>
+							<option value="134">Rwanda</option>
+							<option value="135">Saudi Arabia</option>
+							<option value="136">Senegal</option>
+							<option value="137">Sierra Leone</option>
+							<option value="138">Singapore</option>
+							<option value="139">South Africa</option>
+							<option value="140">Spain</option>
+							<option value="141">Sweden</option>
+							<option value="142">Switzerland</option>
+							<option value="143">Tanzania</option>
+							<option value="144">Togo</option>
+							<option value="145">Turkey</option>
+							<option value="146">Uganda</option>
+							<option value="147">Ukraine</option>
+							<option value="148">United Arab Emirates</option>
+							<option value="149">United Kingdom</option>
+							<option value="150">United States</option>
+							<option value="151">Vietnam</option>
+							<option value="152">Zambia</option>
+							<option value="153">Zanzibar</option>
+							<option value="154">Zimbabwe</option>
 						</select>
 					</div>
 					<div class="mb-4">
@@ -300,7 +516,15 @@
 							class="bg-white outline-none w-full border-2 border-gray-100 rounded-lg p-4 text-gray-600 font-normal text-md shadow-md"
 						>
 							<option value="Mr">Mr</option>
+							<option value="Ms">Ms</option>
 							<option value="Mrs">Mrs</option>
+							<option value="Miss">Miss</option>
+							<option value="Dr">Doctor</option>
+							<option value="Sir">Sir</option>
+							<option value="Alhaji">Alhaji</option>
+							<option value="Chief">Chief</option>
+							<option value="Rev. ">Rev</option>
+							<option value="">Prefer Not To Say</option>
 						</select>
 					</div>
 
@@ -314,8 +538,9 @@
 							bind:value={their_marital_status}
 							class="bg-white outline-none w-full border-2 border-gray-100 rounded-lg p-4 text-gray-600 font-normal text-md shadow-md"
 						>
-							<option value="Single">Single</option>
-							<option value="Married">Married</option>
+							<option value="single">Single</option>
+							<option value="married">Married</option>
+							<option value="divorced">Divorced</option>
 						</select>
 					</div>
 				</div>
@@ -345,8 +570,12 @@
 							bind:value={nature_of_call}
 							class="bg-white outline-none w-full border-2 border-gray-100 rounded-lg p-4 text-gray-600 font-normal text-md shadow-md"
 						>
-							<option value="Appreciation">Appreciation</option>
 							<option value="Celebratory">Celebratory</option>
+							<option value="Self-Love">Self-Love</option>
+							<option value="Appreciation">Appreciation</option>
+							<option value="Reachout">Reachout</option>
+							<option value="Poetry">Poetry</option>
+							<option value="Apology">Apology</option>
 						</select>
 					</div>
 					<div class="mb-4">
@@ -483,8 +712,11 @@
 							bind:value={how_did_you_hear_about_happivibe}
 							class="bg-white outline-none w-full border-2 border-gray-100 rounded-lg p-4 text-gray-600 font-normal text-md shadow-md"
 						>
-							<option value="Whatsapp">Whatsapp</option>
-							<option value="Friend">Friend</option>
+							<option value="friend">Friend</option>
+							<option value="search">Search</option>
+							<option value="facebook">Facebook</option>
+							<option value="twitter">Twitter</option>
+							<option value="others">Others</option>
 						</select>
 					</div>
 					<div class="mb-4">

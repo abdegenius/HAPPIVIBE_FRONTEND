@@ -15,7 +15,7 @@
 		if (data.error == true) {
 			if (browser) {
 				window.localStorage.removeItem('token');
-				window.localStorage.removeItem('token');
+				window.localStorage.removeItem('user');
 				window.location.assign('/login');
 			}
 		}
@@ -33,9 +33,11 @@
 	};
 
 	const LOGOUT = () => {
-		USER.set({});
-		TOKEN.set('');
-		window.location.assign('/login');
+		if (browser) {
+			window.localStorage.removeItem('token');
+			window.localStorage.removeItem('user');
+			window.location.assign('/login');
+		}
 	};
 
 	onMount(() => {
@@ -43,7 +45,7 @@
 			let token = window.localStorage.getItem('token');
 			if (token == 'undefined' || token == undefined || token == '') {
 				window.localStorage.removeItem('token');
-				window.localStorage.removeItem('token');
+				window.localStorage.removeItem('user');
 				window.location.assign('/login');
 			}
 		}
