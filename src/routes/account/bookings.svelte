@@ -116,7 +116,7 @@
 			{#if bookings.links}
 				<div class="my-4 flex justify-start items-center space-x-4">
 					{#each bookings.links as link}
-						<div on:click={CHANGE(link.url)} class="cursor-pointer p-2 text-sm font-black border-2 border-gray-400 text-gray-600 rounded-md {link.active ? 'bg-orange-400' : 'bg-gray-50'}">
+						<div on:click={ CHANGE(link.url) } class="cursor-pointer p-2 text-sm font-black border-2 border-gray-400 text-gray-600 rounded-md {link.active ? 'bg-orange-400' : 'bg-gray-50'}">
 							{@html link.label}
 						</div>
 					{/each}
