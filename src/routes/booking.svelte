@@ -91,7 +91,7 @@
 
 	const SAVE_BOOKING = async (e) => {
 		e.preventDefault();
-		const execute = await API.post('add-booking', {
+		const execute = await API.post('add-booking-anonymous', {
 			your_firstname,
 			your_lastname,
 			your_gender,
