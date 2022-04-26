@@ -125,7 +125,7 @@
 		if (execute.error == false) {
 			Notiflix.Report.success('Successful', 'Hurray! Booking form filled successfully.. ', 'Next');
 			if (browser) {
-				window.location.assign('/account/chat/' + execute.data[1].id);
+				window.location.assign('/chat/' + execute.data[1].id);
 			}
 		} else {
 			Notiflix.Report.failure(
