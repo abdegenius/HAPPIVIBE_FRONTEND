@@ -70,7 +70,7 @@
 
 			<div class="overflow-x-scroll">
 				{#each users.data as user}
-					<a href="/admin/user/{user.order_id}">
+					<a href="/admin/user/{user.id}">
 						<div class="mt-4 flex p-8 justify-start items-center border-b-2 border-gray-200">
 							<div class="w-[150px] md:w-1/5 mr-6">
 								<span class="text-gray-600 uppercase font-medium text-[12px] md:text-sm xl:text-lg"

@@ -18,8 +18,6 @@
 		let link = url.substring(url.indexOf('?'));
 		Agent(link)
 	}
-
-	
 </script>
 
 {#if agents != null}
@@ -70,7 +68,7 @@
 
 			<div class="overflow-x-scroll">
 				{#each agents.data as agent}
-					<a href="/admin/agent/{agent.order_id}">
+					<a href="/admin/agent/{agent.id}">
 						<div class="mt-4 flex p-8 justify-start items-center border-b-2 border-gray-200">
 							<div class="w-[150px] md:w-1/5 mr-6">
 								<span class="text-gray-600 uppercase font-medium text-[12px] md:text-sm xl:text-lg"
