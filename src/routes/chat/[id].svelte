@@ -3,6 +3,7 @@
     import {onMount} from "svelte"
     import { page } from '$app/stores';
 	import { browser } from "$app/env";
+	import { USER } from '../../services/Store'
 
     let chat_id = $page.params.id
     let MESSAGES = async () => {
@@ -42,10 +43,13 @@
 		}
 	}
 	let body = '';
+	let sendby = $USER && $USER.type != 'user' ? 'agent' : 'user'
 	const SEND_MESSAGE = (async() => {
 		let execute = API.post('add-message', {
 			chat_id,
-			body
+			body,
+			sendby
+
 		})
 		getMessages();
 		body = ''
