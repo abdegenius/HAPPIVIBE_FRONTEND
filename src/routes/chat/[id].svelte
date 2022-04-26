@@ -93,8 +93,7 @@
 						class="text-center text-sm md:text-md font-normal py-2 px-4 rounded-lg text-white bg-black"
 						>PAY FROM WALLET</a
 					>
-				{/if}
-				{#if !$USER || $USER == ''}
+				{:else}
 					<a
 						target="_blank" href="https://happivibes-backend.com/api/pay/{chat_id}"
 						class="text-center text-sm md:text-md font-normal py-2 px-4 rounded-lg text-white bg-orange-400"
