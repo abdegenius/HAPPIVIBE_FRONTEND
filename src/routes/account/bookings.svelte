@@ -104,7 +104,7 @@
 							<div class="w-[100px] md:w-1/6 mr-6">
 								{#if booking.chat}
 									<a
-										href="/account/chat/{booking.chat.id}"
+										href="/chat/{booking.chat.id}"
 										class="text-sm text-yellow-600 font-bold">CHAT</a
 									>
 								{/if}
