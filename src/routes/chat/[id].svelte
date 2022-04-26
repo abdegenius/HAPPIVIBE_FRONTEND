@@ -14,9 +14,12 @@
 	let getMessages = (async() => {
 		let data = await MESSAGES();
         messages = data.data[1]
+		booking = data.data[2].booking
 	})
     let messages;
 	$: messages = null;
+    let booking;
+	$: booking = null;
     onMount(async() => {
         getMessages()
     })
@@ -55,32 +58,55 @@
 		body = ''
 	})
 </script>
+
+<div class="m-4 left-0 p-8 md:m-8">
+    <a href="/login" 
+    class="text-center text-lg font-normal py-2 px-4 md:py-4 rounded-lg text-white bg-orange-400">Back</a>
+</div>
 {#if messages != null}
-<div class="mx-4 md:mx-8 xl:mx-16 mt-12">
+<div class="mx-4 md:mx-8 xl:mx-16 mt-8">
 	<div class="mx-auto bg-gray-50 drop-shadow-md rounded-md shadow-sm p-6 w-full h-auto">
 		<div class="flex flex-wrap space-x-4 space-y-4 justify-between items-center">
 			<div class="flex justify-start items-center">
 				<div class="mr-4">
-					<img src="/img/avatar.png" class="w-12 h-12 rounded-lg" alt="avatar" />
+					<img src="https://avatars.dicebear.com/api/initials/{$USER ? $USER.fullname : 'Anonymous'}.svg" class="w-12 h-12 rounded-lg" alt="avatar" />
 				</div>
 				<div>
-					<h4 class="text-gray-600 font-medium text-md">Happivibe agent</h4>
+					<h4 class="text-gray-600 font-medium text-md">Chat NOW!!
+						</h4>
 					<h6 class="text-sm text-gray-600 font-light">
 						<div class="w-2 h-2 rounded-full bg-orange-400 mr-2 inline-block" />
 						Online
 					</h6>
 				</div>
 			</div>
+			{#if booking.is_paid == 'no'}
 			<div>
-				<a
-					href="https://http://happivibes-backend.com/pay/{chat_id}"
-					class="text-center text-sm md:text-md font-norcmal py-2 px-4 rounded-lg text-white bg-orange-400"
-					>MAKE PAYMENT</a
-				>
+				{#if $USER && $USER.type == 'user'}
+					<a
+						target="_blank" href="https://happivibes-backend.com/api/pay/{chat_id}"
+						class="text-center text-sm md:text-md font-normal py-2 px-4 rounded-lg text-white bg-orange-400"
+						>PAY WITH CARD</a
+					>
+					<a
+						target="_blank" href="https://happivibes-backend.com/api/pay-wallet/{chat_id}"
+						class="text-center text-sm md:text-md font-normal py-2 px-4 rounded-lg text-white bg-black"
+						>PAY FROM WALLET</a
+					>
+				{/if}
+				{#if !$USER || $USER == ''}
+					<a
+						target="_blank" href="https://happivibes-backend.com/api/pay/{chat_id}"
+						class="text-center text-sm md:text-md font-normal py-2 px-4 rounded-lg text-white bg-orange-400"
+						>PAY WITH CARD</a
+					>
+				{/if}
 			</div>
-			<!-- <div>
-				<a href="/" class="font-bold text-orange-400 text-sm">EXIT CHAT</a>
-			</div> -->
+			{:else}
+			<div>
+				<b>STATUS: &nbsp;</b>{booking.status}
+			</div>
+			{/if}
 		</div>
 		<div class="flex justify-center items-center">
 			<div class="mx-2 lg:mx-4 bg-orange-100 p-4 rounded-lg my-4 text-gray-600 font-normal text-sm">Messages are end-to-end encrypted. No one outside of this chat, can read or listen to them.</div>

@@ -24,6 +24,9 @@
 				if (execute.data[0].type == 'agent') {
 					window.location.assign('/agent');
 				}
+				if (execute.data[0].type == 'admin') {
+					window.location.assign('/admin');
+				}
 			} else {
 				window.alert(execute.message);
 			}
@@ -32,8 +35,18 @@
 	onMount(() => {
 		if (browser) {
 			let token = window.localStorage.getItem('token');
+			let user = window.localStorage.getItem('user');
 			if (token != 'undefined' && token != undefined && token != '') {
-				window.location.assign('/account');
+				if($USER && $USER.type == 'user'){
+					window.location.assign('/account');
+				}
+				if($USER && $USER.type == 'agent'){
+					window.location.assign('/agent');
+				}
+				if($USER && $USER.type == 'admin'){
+					window.location.assign('/admin');
+				}
+				
 			}
 		}
 	});
