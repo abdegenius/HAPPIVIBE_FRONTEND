@@ -198,6 +198,7 @@
 						>
 							<option value="Female">Female</option>
 							<option value="Male">Male</option>
+							<option value="Others">Others</option>
 						</select>
 					</div>
 					<div class="mb-4">

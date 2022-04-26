@@ -2,8 +2,6 @@
 	import { browser } from '$app/env';
 	import API from '../../services/Api';
 	import Notiflix from 'notiflix';
-	import { USER } from '../../services/Store';
-	let fullname = '';
 
 	let active = 'border-orange-400';
 	let inactive = 'border-gray-200';
@@ -41,19 +39,6 @@
 			document.getElementById('thirdTab').classList.replace(inactive, active);
 		}
 	};
-
-	if (browser) {
-		let fname = $USER.fullname;
-		fullname = fname.split(' ');
-	}
-	let your_firstname = fullname.length > 0 ? fullname[0] : '';
-	let your_lastname = fullname.length > 1 ? fullname[1] : '';
-	let your_gender = $USER.gender;
-	let your_phone = $USER.phone;
-	let your_country = $USER.country;
-	let your_location = $USER.location;
-	let your_salutation = $USER.salutation;
-	let your_marital_status = $USER.marital_status;
 	let their_firstname = '';
 	let their_lastname = '';
 	let their_gender = '';
@@ -77,14 +62,6 @@
 	const SAVE_BOOKING = async (e) => {
 		e.preventDefault();
 		const execute = await API.post('add-booking', {
-			your_firstname,
-			your_lastname,
-			your_gender,
-			your_phone,
-			your_country,
-			your_location,
-			your_salutation,
-			your_marital_status,
 			their_firstname,
 			their_lastname,
 			their_gender,
@@ -110,7 +87,7 @@
 		if (execute.error == false) {
 			Notiflix.Report.success('Successful', 'Hurray! Booking form filled successfully.. ', 'Next');
 			if (browser) {
-				window.location.assign('/account/chat/' + execute.data[1].id);
+				window.location.assign('/chat/' + execute.data[1].id);
 			}
 		} else {
 			Notiflix.Report.failure(
@@ -171,6 +148,7 @@
 					>
 						<option value="Female">Female</option>
 						<option value="Male">Male</option>
+						<option value="Others">Others</option>
 					</select>
 				</div>
 				<div class="mb-4">

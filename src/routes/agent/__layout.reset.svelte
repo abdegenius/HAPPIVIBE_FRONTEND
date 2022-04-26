@@ -20,7 +20,7 @@
 			}
 		}
 		if (data.error == false) {
-			if (data.data[0].type == 'user') {
+			if (data.data[0].type == 'agent') {
 				USER.set(data.data[0]);
 				TOKEN.set(data.data[1]);
 			} else {
@@ -69,19 +69,10 @@
 				</p>
 				<ul class="mt-8">
 					<li class="mb-6 ml-8 p-4">
-						<a href="/account" class="text-gray-100 text-xl font-medium"> Overview</a>
+						<a href="/agent" class="text-gray-100 text-xl font-medium"> Bookings</a>
 					</li>
 					<li class="mb-6 ml-8 p-4">
-						<a href="/account/bookings" class="text-gray-100 text-xl font-medium"> Bookings</a>
-					</li>
-					<li class="mb-6 ml-8 p-4">
-						<a href="/account/wallet" class="text-gray-100 text-xl font-medium"> Wallet</a>
-					</li>
-					<li class="mb-6 ml-8 p-4">
-						<a href="/account/referrals" class="text-gray-100 text-xl font-medium"> Referrals</a>
-					</li>
-					<li class="mb-6 ml-8 p-4">
-						<a href="/account/profile" class="text-gray-100 text-xl font-medium"> Profile</a>
+						<a href="/agent/profile" class="text-gray-100 text-xl font-medium"> Profile</a>
 					</li>
 					<li class="mb-6 ml-8 p-4">
 						<a on:click={LOGOUT} href="#" class="text-gray-100 text-xl font-medium"> Logout</a>
@@ -135,35 +126,14 @@
 					<li class="flex justify-center items-start mb-12">
 						<a
 							on:click={MENU_CLOSE}
-							href="/account"
-							class="block text-center text-gray-100 font-light text-3xl">Overview</a
-						>
-					</li>
-					<li class="flex justify-center items-start mb-12">
-						<a
-							on:click={MENU_CLOSE}
-							href="/account/bookings"
+							href="/agent"
 							class="block text-center text-gray-100 font-light text-3xl">Bookings</a
 						>
 					</li>
 					<li class="flex justify-center items-start mb-12">
 						<a
 							on:click={MENU_CLOSE}
-							href="/account/wallet"
-							class="block text-center text-gray-100 font-light text-3xl">Wallet</a
-						>
-					</li>
-					<li class="flex justify-center items-start mb-12">
-						<a
-							on:click={MENU_CLOSE}
-							href="/account/referrals"
-							class="block text-center text-gray-100 font-light text-3xl">Referrals</a
-						>
-					</li>
-					<li class="flex justify-center items-start mb-12">
-						<a
-							on:click={MENU_CLOSE}
-							href="/account/profile"
+							href="/agent/profile"
 							class="block text-center text-gray-100 font-light text-3xl">Profile</a
 						>
 					</li>

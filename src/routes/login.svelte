@@ -18,10 +18,14 @@
 			if (execute.error == false) {
 				USER.set(execute.data[0]);
 				TOKEN.set(execute.data[1]);
-				window.location.assign('/account');
-			}
-			else{
-				window.alert(execute.message)
+				if (execute.data[0].type == 'user') {
+					window.location.assign('/account');
+				}
+				if (execute.data[0].type == 'agent') {
+					window.location.assign('/agent');
+				}
+			} else {
+				window.alert(execute.message);
 			}
 		}
 	};
