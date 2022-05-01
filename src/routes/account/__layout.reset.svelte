@@ -23,6 +23,9 @@
 			if (data.data[0].type == 'user') {
 				USER.set(data.data[0]);
 				TOKEN.set(data.data[1]);
+				if(data.data[0].status == 'unverified'){
+					window.location.assign('/verify');					
+				}
 			} else {
 				if (browser) {
 					window.localStorage.removeItem('token');

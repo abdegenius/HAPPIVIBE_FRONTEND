@@ -32,14 +32,14 @@
 
 	const MESSAGE_BODY = (sendby, body) => {
 		if(sendby != 'user'){
-			return `<div class="mb-4 flex justify-start mx-4">
-				<div class="w-full lg:w-1/2 bg-white mb-6 rounded-t-lg rounded-br-lg p-6 text-gray-600">${body}
+			return `<div class="mb-1 flex justify-start mx-4">
+				<div class="w-full lg:w-1/2 bg-gray-100 mb-2 rounded-t-lg rounded-br-lg p-2 text-gray-600">${body}
 				</div>
 			</div>`;
 		}
 		else{
-			return `<div class="mb-4 flex justify-end mx-4">
-				<div class="w-full lg:w-1/2 bg-orange-200 mb-6 rounded-t-lg rounded-br-lg p-6 text-gray-600">
+			return `<div class="mb-1 flex justify-end mx-4">
+				<div class="w-full lg:w-1/2 bg-orange-200 mb-2 rounded-t-lg rounded-br-lg p-2 text-gray-600">
 					${body}
 				</div>
 			</div>`;
@@ -57,13 +57,23 @@
 		getMessages();
 		body = ''
 	})
+
+
+	const PAYMENT = (async(order_id, checkout) => {
+		checkout =  checkout == 'no' ? 'yes' : 'no'
+		let execute = API.post('update-payment', {
+			order_id,
+			checkout
+		})
+		console.log(execute)
+	})
 </script>
 
 <div class="m-4 left-0 p-8 md:m-8">
     <a href="/login" 
     class="text-center text-lg font-normal py-2 px-4 md:py-4 rounded-lg text-white bg-orange-400">Back</a>
 </div>
-{#if messages != null}
+{#if messages != null && booking != null}
 <div class="mx-4 md:mx-8 xl:mx-16 mt-8">
 	<div class="mx-auto bg-gray-50 drop-shadow-md rounded-md shadow-sm p-6 w-full h-auto">
 		<div class="flex flex-wrap space-x-4 space-y-4 justify-between items-center">
@@ -82,7 +92,7 @@
 			</div>
 			{#if booking.is_paid == 'no'}
 			<div>
-				{#if $USER && $USER.type == 'user'}
+				{#if $USER && $USER.type == 'user' && booking.checkout == 'yes'}
 					<a
 						target="_blank" href="https://happivibes-backend.com/api/pay/{chat_id}"
 						class="text-center text-sm md:text-md font-normal py-2 px-4 rounded-lg text-white bg-orange-400"
@@ -93,11 +103,18 @@
 						class="text-center text-sm md:text-md font-normal py-2 px-4 rounded-lg text-white bg-black"
 						>PAY FROM WALLET</a
 					>
-				{:else}
+				{/if}
+				{#if $USER.type != 'user' &&  $USER.type != 'agent' && $USER.type != 'admin' && !$USER && booking.checkout == 'yes'}
 					<a
 						target="_blank" href="https://happivibes-backend.com/api/pay/{chat_id}"
 						class="text-center text-sm md:text-md font-normal py-2 px-4 rounded-lg text-white bg-orange-400"
 						>PAY WITH CARD</a
+					>
+				{/if}
+				{#if $USER && $USER.type == 'agent'}
+					<span on:click={PAYMENT(booking.order_id, booking.checkout)}
+						class="text-center cursor-pointer text-sm md:text-md font-normal py-2 px-4 rounded-lg text-white bg-orange-800"
+						>{booking.checkout == 'no' ? 'ALLOW' : 'BLOCK'} PAYMENT</span
 					>
 				{/if}
 			</div>
@@ -110,18 +127,18 @@
 		<div class="flex justify-center items-center">
 			<div class="mx-2 lg:mx-4 bg-orange-100 p-4 rounded-lg my-4 text-gray-600 font-normal text-sm">Messages are end-to-end encrypted. No one outside of this chat, can read or listen to them.</div>
 		</div>
-		<div class="my-6 max-h-[600px] min-h-[600px] overflow-y-scroll">
+		<div class="my-6 max-h-[400px] min-h-[400px] overflow-y-scroll">
 			{#each messages as message}
 				{@html MESSAGE_BODY(message.send_by, message.body)}
 			{/each}
 		</div>
 
-		<div class="flex justify-start items-center bg-white">
+		<div class="flex justify-start items-center bg-gray-200">
 			<div class="rounded-l-lg border border-gray-100 w-full">
-				<textarea bind:value={body} class="h-[75px] text-sm font-light appearance-none outline-none w-full p-4 rounded-lg"></textarea> 
+				<textarea bind:value={body} class="h-[45px] text-sm font-light appearance-none outline-none w-full p-4 rounded-lg"></textarea> 
 			</div>
 			<div>
-				<button type="button" on:click|preventDefault={SEND_MESSAGE} class="bg-orange-400 text-white text-sm font-bold p-4 h-[75px] rounded-r-lg">SEND</button>
+				<button type="button" on:click|preventDefault={SEND_MESSAGE} class="bg-orange-400 text-white text-sm font-bold p-4 h-40px] rounded-r-lg">SEND</button>
 			</div>
 		</div>
 	</div>

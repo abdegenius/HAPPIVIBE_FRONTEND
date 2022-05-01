@@ -42,9 +42,7 @@
 			referred_by
 		});
 		if (browser) {
-			USER.set(execute.data[0]);
-			TOKEN.set(execute.data[1]);
-			window.location.assign('/account');
+			window.location.assign('/verify');
 		}
 	};
 	onMount(() => {

@@ -5,13 +5,25 @@
 	import API from '../services/Api';
 	import { USER, TOKEN } from '../services/Store';
 
-	let email = '';
+	let evc = '';
 
-	const RESET = async (e) => {
+	const VERIFY = async (e) => {
 		e.preventDefault();
-		let execute = await API.post('reset/password', {
-			email
+		let execute = await API.post('verify/profile', {
+			evc
 		});
+		if (browser) {
+			if (execute.error == false) {
+				window.location.assign('/account');
+			} else {
+				window.alert(execute.message);
+			}
+		}
+	};
+
+    const RESEND = async (e) => {
+		e.preventDefault();
+		let execute = await API.get('resend/evc');
 		if (browser) {
 			if (execute.error == false) {
 				window.alert(execute.message);
@@ -70,32 +82,33 @@
 				<div
 					class="md:w-[400px] w-full bg-white drop-shadow-lg rounded-lg border border-gray-300 px-6 py-24"
 				>
-					<h1 class="text-center font-black text-2xl">Forgot Password?</h1>
-					<p class="text-center font-light text-sm">Enter your email address to reset password</p>
+					<h1 class="text-center font-black text-2xl">Verify E-mail</h1>
+					<p class="text-center font-light text-sm">Enter your email verification code to verifiy password</p>
 
-					<form class="my-8" method="POST" on:submit|preventDefault={RESET}>
+					<form class="my-8" method="POST" on:submit|preventDefault={VERIFY}>
 							<div class="mb-4">
-								<label for="email" class="block text-gray-800 font-semibold text-sm uppercase mb-2"
-									>Email Address</label
+								<label for="evc" class="block text-gray-800 font-semibold text-sm uppercase mb-2"
+									>Email verification code</label
 								>
 								<input
-									type="email"
-									bind:value={email}
-									id="email"
+									type="text"
+									bind:value={evc}
+									id="evc"
 									class="bg-white outline-none appearance-none w-full border-2 border-gray-100 rounded-lg p-2 text-gray-600 font-normal text-md"
-									placeholder="Enter Your Email Address"
+									placeholder="* * * * * *"
 								/>
 							</div>
 							<button
 								type="submit"
 								class="mt-6 bg-orange-400 text-white text-center font-bold rounded-lg p-4 block w-full"
-								>Reset Password</button
+								>Verify..</button
 							>
 					</form>
 
 					<p class="text-center font-light text-md">
-						Already have an account? <a href="/login" class="text-orange-400 font-bold">Sign In</a>
+						Didn't get the code? <span on:click={RESEND} class="text-orange-400 font-bold">resend code</span>
 					</p>
+
 
 				</div>
 			</div>

@@ -18,14 +18,19 @@
 			if (execute.error == false) {
 				USER.set(execute.data[0]);
 				TOKEN.set(execute.data[1]);
-				if (execute.data[0].type == 'user') {
-					window.location.assign('/account');
+				if(execute.data[0].status == 'verified'){
+					if (execute.data[0].type == 'user') {
+						window.location.assign('/account');
+					}
+					if (execute.data[0].type == 'agent') {
+						window.location.assign('/agent');
+					}
+					if (execute.data[0].type == 'admin') {
+						window.location.assign('/admin');
+					}
 				}
-				if (execute.data[0].type == 'agent') {
-					window.location.assign('/agent');
-				}
-				if (execute.data[0].type == 'admin') {
-					window.location.assign('/admin');
+				else{
+					window.location.assign('/verify');
 				}
 			} else {
 				window.alert(execute.message);

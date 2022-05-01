@@ -68,14 +68,32 @@
 					<img src="/img/logo-white.png" alt="Logo" class="w-32 h-12" />
 				</p>
 				<ul class="mt-8">
-					<li class="mb-6 ml-8 p-4">
-						<a href="/agent" class="text-gray-100 text-xl font-medium"> Bookings</a>
+					<li class="mb-4 ml-2 p-4">
+						<a href="/agent" class="text-gray-100 text-sm font-medium">All Bookings</a>
 					</li>
-					<li class="mb-6 ml-8 p-4">
-						<a href="/agent/profile" class="text-gray-100 text-xl font-medium"> Profile</a>
+					<li class="mb-4 ml-2 p-4">
+						<a href="/agent/paid" class="text-gray-100 text-sm font-medium"> Paid Bookings</a>
 					</li>
-					<li class="mb-6 ml-8 p-4">
-						<a on:click={LOGOUT} href="#" class="text-gray-100 text-xl font-medium"> Logout</a>
+					<li class="mb-4 ml-2 p-4">
+						<a href="/agent/unpaid" class="text-gray-100 text-sm font-medium">Unpaid Bookings</a>
+					</li>
+					<li class="mb-4 ml-2 p-4">
+						<a href="/agent/processing" class="text-gray-100 text-sm font-medium">Processing Bookings</a>
+					</li>
+					<li class="mb-4 ml-2 p-4">
+						<a href="/agent/completed" class="text-gray-100 text-sm font-medium"> Completed Bookings</a>
+					</li>
+					<li class="mb-4 ml-2 p-4">
+						<a href="/agent/awaiting" class="text-gray-100 text-sm font-medium"> Awaiting Bookings</a>
+					</li>
+					<li class="mb-4 ml-2 p-4">
+						<a href="/agent/failed" class="text-gray-100 text-sm font-medium"> Failed Bookings</a>
+					</li>
+					<li class="mb-4 ml-2 p-4">
+						<a href="/agent/profile" class="text-gray-100 text-sm font-medium"> Profile</a>
+					</li>
+					<li class="mb-4 ml-2 p-4">
+						<a on:click={LOGOUT} href="#" class="text-gray-100 text-sm font-medium"> Logout</a>
 					</li>
 				</ul>
 			</div>
@@ -123,25 +141,67 @@
 		<div class="hidden fixed top-0 z-50 min-h-screen w-screen bg-black mx-auto" id="mobilemenu">
 			<div class="mt-24 flex justify-center items-center">
 				<ul class="p-4">
-					<li class="flex justify-center items-start mb-12">
+					<li class="flex justify-center items-start mb-6">
 						<a
 							on:click={MENU_CLOSE}
 							href="/agent"
-							class="block text-center text-gray-100 font-light text-3xl">Bookings</a
+							class="block text-center text-gray-100 font-light text-xl">All Bookings</a
 						>
 					</li>
-					<li class="flex justify-center items-start mb-12">
+					<li class="flex justify-center items-start mb-6">
+						<a
+							on:click={MENU_CLOSE}
+							href="/agent/paid"
+							class="block text-center text-gray-100 font-light text-xl">Paid Bookings</a
+						>
+					</li>
+					<li class="flex justify-center items-start mb-6">
+						<a
+							on:click={MENU_CLOSE}
+							href="/agent/unpaid"
+							class="block text-center text-gray-100 font-light text-xl">Unpaid Bookings</a
+						>
+					</li>
+					<li class="flex justify-center items-start mb-6">
+						<a
+							on:click={MENU_CLOSE}
+							href="/agent/processing"
+							class="block text-center text-gray-100 font-light text-xl">Processing Bookings</a
+						>
+					</li>
+					<li class="flex justify-center items-start mb-6">
+						<a
+							on:click={MENU_CLOSE}
+							href="/agent/completed"
+							class="block text-center text-gray-100 font-light text-xl">Completed Bookings</a
+						>
+					</li>
+					<li class="flex justify-center items-start mb-6">
+						<a
+							on:click={MENU_CLOSE}
+							href="/agent/awaiting"
+							class="block text-center text-gray-100 font-light text-xl">Awaiting Bookings</a
+						>
+					</li>
+					<li class="flex justify-center items-start mb-6">
+						<a
+							on:click={MENU_CLOSE}
+							href="/agent/failed"
+							class="block text-center text-gray-100 font-light text-xl">Failed Bookings</a
+						>
+					</li>
+					<li class="flex justify-center items-start mb-6">
 						<a
 							on:click={MENU_CLOSE}
 							href="/agent/profile"
-							class="block text-center text-gray-100 font-light text-3xl">Profile</a
+							class="block text-center text-gray-100 font-light text-xl">Profile</a
 						>
 					</li>
-					<li class="flex justify-center items-start mb-12">
+					<li class="flex justify-center items-start mb-6">
 						<a
 							on:click={LOGOUT}
 							href="#"
-							class="block text-center text-gray-100 font-light text-3xl"
+							class="block text-center text-gray-100 font-light text-xl"
 						>
 							Logout</a
 						>
@@ -149,7 +209,7 @@
 				</ul>
 			</div>
 			<div
-				class="bottom-0 mb-8 mx-auto text-center text-orange-400 font-light text-3xl pt-4 border-t-4 border-white cursor-pointer"
+				class="bottom-0 mb-8 mx-auto text-center text-orange-400 font-light text-xl pt-4 border-t-4 border-white cursor-pointer"
 				on:click={MENU_CLOSE}
 			>
 				Close

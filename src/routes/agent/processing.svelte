@@ -6,7 +6,7 @@
 	$: bookings = null;
 
 	const BOOKINGS = async (link) => {
-		let execute = await API.get(`all-bookings${link ? link : ""}`);
+		let execute = await API.get(`processing-bookings${link ? link : ""}`);
 		bookings = null;
 		bookings = execute.data[0]
 	};
@@ -28,15 +28,8 @@
 			<div class="p-8 border-2 border-gray-200">
 				<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
 					<div>
-						<h3 class="font-bold text-xl text-orange-400">All Booking Tickets</h3>
-					</div>
-					<div>
-						<input
-							class="w-full p-4 border border-gray-800 rounded-lg"
-							type="text"
-							placeholder=" Search Tickets"
-						/>
-					</div>
+						<h3 class="font-bold text-xl text-orange-400">Processing Booking Tickets</h3>
+                    </div>
 				</div>
 				
 				<div class="overflow-x-scroll">
