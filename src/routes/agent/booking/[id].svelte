@@ -60,7 +60,7 @@ import { browser } from "$app/env";
                         <b class="text-black text-md font-semibold">Caller Phone No: </b>
                     </div>
                     <div class="">
-                        <b class="text-gray-800 text-md font-normal">{booking.your_phone} </b>
+                        <b class="text-gray-800 text-md font-normal"><a href="tel:{booking.your_phone}">{booking.your_phone}</a></b>
                     </div>
                 </li>
                 <li class="py-4 border-b-2 border-gray-100 flex justify-start items-start">

@@ -106,7 +106,7 @@
 					</form>
 
 					<p class="text-center font-light text-md">
-						Didn't get the code? <span on:click={RESEND} class="text-orange-400 font-bold">resend code</span>
+						Didn't get the code? <span on:click={RESEND} class="text-orange-400 font-bold cursor-pointer">resend code</span>
 					</p>
 
 
