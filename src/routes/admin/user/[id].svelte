@@ -23,6 +23,7 @@
 
 	const UPDATE = async () => {
 		let execute = await API.post('admin/edit/user', {
+			id,
 			type,
 			password,
 			current_balance
