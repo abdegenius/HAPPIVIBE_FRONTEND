@@ -65,7 +65,7 @@
 			order_id,
 			checkout
 		})
-		console.log(execute)
+		
 	})
 </script>
 
@@ -113,7 +113,7 @@
 				{/if}
 				{#if $USER && $USER.type == 'agent'}
 					<span on:click={PAYMENT(booking.order_id, booking.checkout)}
-						class="text-center cursor-pointer text-sm md:text-md font-normal py-2 px-4 rounded-lg text-white bg-orange-800"
+						class="payment-btn text-center cursor-pointer text-sm md:text-md font-normal py-2 px-4 rounded-lg text-white bg-orange-800"
 						>{booking.checkout == 'no' ? 'ALLOW' : 'BLOCK'} PAYMENT</span
 					>
 				{/if}

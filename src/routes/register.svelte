@@ -42,7 +42,7 @@
 			referred_by
 		});
 		if (browser) {
-			window.location.assign('/verify');
+			window.location.assign('/login');
 		}
 	};
 	onMount(() => {
