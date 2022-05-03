@@ -12,13 +12,13 @@
 	};
 	let user = null;
 	let type = '';
-	let current_balance = '';
+	let account_balance = '';
 	let password = '';
 	onMount(async () => {
 		let data = await USER();
 		user = data.data[0];
 		type = user.type;
-		current_balance = user.wallet.current_balance;
+		account_balance = user.wallet.account_balance;
 	});
 
 	const UPDATE = async () => {
@@ -26,7 +26,7 @@
 			id,
 			type,
 			password,
-			current_balance
+			account_balance
 		});
 		if (execute.error == false) {
 			if (browser) {
@@ -123,10 +123,10 @@
 							</select>
 						</div>
 						<div class="w-full mb-4">
-							<label>Current balance</label><br />
+							<label>Account balance</label><br />
 							<input
 								type="text"
-								bind:value={current_balance}
+								bind:value={account_balance}
 								placeholder="Account Balance"
 								autocomplete="off"
 								class="outline-none w-full border-2 border-orange-400 rounded-lg p-4 text-lg bg-white text-gray-600"
