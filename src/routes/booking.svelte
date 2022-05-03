@@ -88,6 +88,7 @@
 	let how_did_you_hear_about_happivibe = '';
 	let date_to_make_call = '';
 	let time_to_make_call = '';
+	let email = '';
 
 	const SAVE_BOOKING = async (e) => {
 		e.preventDefault();
@@ -119,7 +120,8 @@
 			what_you_want_to_say,
 			how_did_you_hear_about_happivibe,
 			date_to_make_call,
-			time_to_make_call
+			time_to_make_call,
+			email
 		});
 
 		if (execute.error == false) {
@@ -164,6 +166,20 @@
 
 		<form method="POST" on:submit|preventDefault={SAVE_BOOKING}>
 			<div id="first">
+				<div class="grid grid-cols-1 gap-8">
+					<div class="mb-4">
+						<label for="email" class="block text-gray-800 font-semibold text-sm uppercase mb-2"
+							>Email Address</label
+						>
+						<input
+							type="text"
+							id="email"
+							bind:value={email}
+							class="bg-white outline-none appearance-none w-full border-2 border-gray-100 rounded-lg p-4 text-gray-600 font-normal text-md shadow-md"
+						/>
+					</div>
+				</div>
+
 				<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
 					<div class="mb-4">
 						<label for="firstname" class="block text-gray-800 font-semibold text-sm uppercase mb-2"
