@@ -31,7 +31,7 @@
 	}
 
 	const MESSAGE_BODY = (sendby, body) => {
-		if($USER){
+		if($USER && $USER != ''){
 			if(sendby != 'user'){
 				return `<div class="mb-1 flex justify-start mx-4">
 					<div class="w-full lg:w-1/2 bg-gray-100 mb-2 rounded-t-lg rounded-br-lg p-2 text-gray-600">${body}
