@@ -1,6 +1,6 @@
 <script>
     import API from "../../../services/Api"
-    import {CURRENCY} from "../../../services/Helper"
+    import {CURRENCY, STATUS} from "../../../services/Helper"
     import {onMount} from "svelte"
     import { page } from '$app/stores';
 import { browser } from "$app/env";
@@ -148,7 +148,15 @@ import { browser } from "$app/env";
                         <b class="text-black text-md font-semibold">Status Of Call: </b>
                     </div>
                     <div class="">
-                        <b class="text-gray-800 text-md font-normal uppercase">{booking.status} </b>
+                        <b class="text-gray-800 text-md font-normal uppercase">{STATUS(booking.status)} </b>
+                    </div>
+                </li>
+                <li class="py-4 border-b-2 border-gray-100 flex justify-start items-start">
+                    <div class="mr-2">
+                        <b class="text-black text-md font-semibold">Amount: </b>
+                    </div>
+                    <div class="">
+                        <b class="text-gray-800 text-md font-normal uppercase">{booking.amount} </b>
                     </div>
                 </li>
                 <li class="py-4 border-b-2 border-gray-100 flex justify-start items-start">
@@ -279,6 +287,7 @@ import { browser } from "$app/env";
                             <select bind:value={status} class="outline-none w-full border-2 border-orange-400 rounded-lg p-4 text-lg bg-white text-gray-600">
                                 <option value="processing">processing</option>
                                 <option value="awaiting">awaiting</option>
+								<option value="in_progress">in progress</option>
                                 <option value="completed">completed</option>
                                 <option value="failed">failed</option>
                             </select>

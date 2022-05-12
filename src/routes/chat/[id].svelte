@@ -4,6 +4,7 @@
     import { page } from '$app/stores';
 	import { browser } from "$app/env";
 	import { USER } from '../../services/Store'
+	import moment from 'moment';
 
     let chat_id = $page.params.id
     let MESSAGES = async () => {
@@ -30,11 +31,14 @@
 		},10000);		
 	}
 
-	const MESSAGE_BODY = (sendby, body) => {
+	const MESSAGE_BODY = (sendby, body, date) => {
+		let m = moment(date, 'YYYY-MM-DD').fromNow()
 		if($USER && $USER != ''){
 			if(sendby != 'user'){
 				return `<div class="mb-1 flex justify-start mx-4">
-					<div class="w-full lg:w-1/2 bg-gray-100 mb-2 rounded-t-lg rounded-br-lg p-2 text-gray-600">${body}
+					<div class="w-full lg:w-1/2 bg-gray-100 mb-2 rounded-t-lg rounded-br-lg p-2 text-gray-600">
+						${body}
+						<p class="text-sm font-light p-2 text-gray-600">${m}</p>
 					</div>
 				</div>`;
 			}
@@ -42,6 +46,7 @@
 				return `<div class="mb-1 flex justify-end mx-4">
 					<div class="w-full lg:w-1/2 bg-orange-200 mb-2 rounded-t-lg rounded-br-lg p-2 text-gray-600">
 						${body}
+						<p class="text-sm font-light p-2 text-gray-600">${m}</p>
 					</div>
 				</div>`;
 			}
@@ -50,6 +55,7 @@
 			return `<div class="mb-1 flex justify-end mx-4">
 				<div class="w-full lg:w-1/2 bg-orange-800 mb-2 rounded-t-lg rounded-br-lg p-2 text-gray-50">
 					${body}
+					<p class="text-sm font-light p-2 text-gray-600">${m}</p>
 				</div>
 			</div>`;
 		}
@@ -61,7 +67,6 @@
 			chat_id,
 			body,
 			sendby
-
 		})
 		getMessages();
 		body = ''
@@ -138,7 +143,7 @@
 		</div>
 		<div class="my-6 max-h-[400px] min-h-[400px] overflow-y-scroll">
 			{#each messages as message}
-				{@html MESSAGE_BODY(message.send_by, message.body)}
+				{@html MESSAGE_BODY(message.send_by, message.body, message.created_at)}
 			{/each}
 		</div>
 
