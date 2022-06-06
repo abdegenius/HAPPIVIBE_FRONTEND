@@ -88,7 +88,7 @@
 							</div>
 							<button
 								type="submit"
-								class="mt-6 bg-orange-400 text-white text-center font-bold rounded-lg p-4 block w-full"
+								class="mt-6 bg-orange-400 text-white text-center font-bold rounded-lg p-4 block w-full cursor-pointer"
 								>Reset Password</button
 							>
 					</form>

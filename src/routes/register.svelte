@@ -17,6 +17,7 @@
 	};
 
 	let password,
+		password_again,
 		fullname,
 		gender,
 		email,
@@ -29,20 +30,27 @@
 
 	const SIGNUP = async (e) => {
 		e.preventDefault();
-		let execute = await API.post('register', {
-			fullname,
-			gender,
-			email,
-			phone,
-			password,
-			country,
-			location,
-			marital_status,
-			salutation,
-			referred_by
-		});
-		if (browser) {
-			window.location.assign('/login');
+		if(password === password_again){
+			let execute = await API.post('register', {
+				fullname,
+				gender,
+				email,
+				phone,
+				password,
+				country,
+				location,
+				marital_status,
+				salutation,
+				referred_by
+			});
+			if (browser) {
+				window.location.assign('/login');
+			}
+		}
+		else{
+			if(browser){
+				alert("Password confirmation failed");
+			}
 		}
 	};
 	onMount(() => {
@@ -53,6 +61,32 @@
 			}
 		}
 	});
+
+	const SHOW = () => {
+		if (browser) {
+			let x = document.getElementById('password');
+			if (x.type === 'password') {
+				x.type = 'text';
+				document.getElementById('showhide').innerText = 'Hide password';
+			} else {
+				x.type = 'password';
+				document.getElementById('showhide').innerText = 'Show password';
+			}
+		}
+	};
+
+	const SHOW2 = () => {
+		if (browser) {
+			let x = document.getElementById('password_again');
+			if (x.type === 'password') {
+				x.type = 'text';
+				document.getElementById('showhide2').innerText = 'Hide password';
+			} else {
+				x.type = 'password';
+				document.getElementById('showhide2').innerText = 'Show password';
+			}
+		}
+	};
 </script>
 
 <section class="w-screen min-h-screen bg-gray-50">
@@ -167,14 +201,30 @@
 								<input
 									type="password"
 									bind:value={password}
+									id="password"
 									class="bg-white outline-none appearance-none w-full border-2 border-gray-100 rounded-lg p-2 text-gray-600 font-normal text-md"
 									placeholder="Enter Your Password"
 								/>
+								<span on:click="{SHOW}" class="cursor-pointer text-right p-2 font-bold text-sm text-blue-800" id="showhide">Show password</span>
+							</div>
+							<div class="mb-4">
+								<label
+									for="password_again"
+									class="block text-gray-800 font-semibold text-sm uppercase mb-2">Password Again</label
+								>
+								<input
+									type="password"
+									bind:value={password_again}
+									id="password_again"
+									class="bg-white outline-none appearance-none w-full border-2 border-gray-100 rounded-lg p-2 text-gray-600 font-normal text-md"
+									placeholder="Enter Password Again"
+								/>
+								<span on:click="{SHOW2}" class="cursor-pointer text-right p-2 font-bold text-sm text-blue-800" id="showhide2">Show password</span>
 							</div>
 							<button
 								type="button"
 								on:click={NEXT}
-								class="mt-6 bg-orange-400 text-white text-center font-bold rounded-lg p-4 block w-full"
+								class="mt-6 bg-orange-400 text-white text-center font-bold rounded-lg p-4 block w-full cursor-pointer"
 								>Next</button
 							>
 						</div>
@@ -313,9 +363,9 @@
 									bind:value={marital_status}
 									class="bg-white outline-none w-full border-2 border-gray-100 rounded-lg p-2 text-gray-600 font-normal text-md"
 								>
-								<option value="single">Single</option>
-								<option value="married">Married</option>
-								<option value="divorced">Divorced</option>
+									<option value="single">Single</option>
+									<option value="married">Married</option>
+									<option value="divorced">Divorced</option>
 								</select>
 							</div>
 							<div class="mb-4">
@@ -336,12 +386,12 @@
 								<button
 									type="button"
 									on:click={PREVIEW}
-									class="mt-6 mr-2 bg-black text-white text-center font-bold rounded-lg p-4 block w-full"
+									class="mt-6 mr-2 bg-black text-white text-center font-bold rounded-lg p-4 block w-full cursor-pointer"
 									>Preview</button
 								>
 								<button
 									type="submit"
-									class="mt-6 ml-2 bg-orange-400 text-white text-center font-bold rounded-lg p-4 block w-full"
+									class="mt-6 ml-2 bg-orange-400 text-white text-center font-bold rounded-lg p-4 block w-full cursor-pointer"
 									>Complete</button
 								>
 							</div>
