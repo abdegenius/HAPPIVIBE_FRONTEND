@@ -3,7 +3,8 @@ module.exports = {
 	theme: {
 		extend: {
 			colors: {
-				'orange-400': '#FFA500'
+				'orange-400': '#FFA500',
+				primary: '#FFA500'
 			}
 		}
 	},

@@ -1,18 +1,10 @@
 <script>
-<<<<<<< HEAD
 	import API from '../../services/Api';
 	import { onMount } from 'svelte';
 	import { page } from '$app/stores';
 	import { browser } from '$app/env';
 	import { USER } from '../../services/Store';
-=======
-    import API from "../../services/Api"
-    import {onMount} from "svelte"
-    import { page } from '$app/stores';
-	import { browser } from "$app/env";
-	import { USER } from '../../services/Store'
 	import moment from 'moment';
->>>>>>> 7087220e3ea3e4deb96ddac773370eee5ec3c6d9
 
 	let chat_id = $page.params.id;
 	let MESSAGES = async () => {
@@ -39,16 +31,10 @@
 		}, 10000);
 	}
 
-<<<<<<< HEAD
-	const MESSAGE_BODY = (sendby, body) => {
+	const MESSAGE_BODY = (sendby, body, date) => {
+		let m = moment(date, 'YYYY-MM-DD').fromNow();
 		if ($USER && $USER != '') {
 			if (sendby != 'user') {
-=======
-	const MESSAGE_BODY = (sendby, body, date) => {
-		let m = moment(date, 'YYYY-MM-DD').fromNow()
-		if($USER && $USER != ''){
-			if(sendby != 'user'){
->>>>>>> 7087220e3ea3e4deb96ddac773370eee5ec3c6d9
 				return `<div class="mb-1 flex justify-start mx-4">
 					<div class="w-full lg:w-1/2 bg-gray-100 mb-2 rounded-t-lg rounded-br-lg p-2 text-gray-600">
 						${body}
@@ -79,11 +65,7 @@
 			chat_id,
 			body,
 			sendby
-<<<<<<< HEAD
 		});
-=======
-		})
->>>>>>> 7087220e3ea3e4deb96ddac773370eee5ec3c6d9
 		getMessages();
 		body = '';
 	};
@@ -172,16 +154,11 @@
 					them.
 				</div>
 			</div>
-<<<<<<< HEAD
-			<div class="my-6 max-h-[400px] min-h-[400px] overflow-y-scroll">
-				{#each messages as message}
-					{@html MESSAGE_BODY(message.send_by, message.body)}
-				{/each}
-=======
-			{/if}
 		</div>
 		<div class="flex justify-center items-center">
-			<div class="mx-2 lg:mx-4 bg-orange-100 p-4 rounded-lg my-4 text-gray-600 font-normal text-sm">Messages are end-to-end encrypted. No one outside of this chat, can read or listen to them.</div>
+			<div class="mx-2 lg:mx-4 bg-orange-100 p-4 rounded-lg my-4 text-gray-600 font-normal text-sm">
+				Messages are end-to-end encrypted. No one outside of this chat, can read or listen to them.
+			</div>
 		</div>
 		<div class="my-6 max-h-[400px] min-h-[400px] overflow-y-scroll">
 			{#each messages as message}
@@ -191,8 +168,10 @@
 
 		<div class="flex justify-start items-center bg-gray-200">
 			<div class="rounded-l-lg border border-gray-100 w-full">
-				<textarea bind:value={body} class="h-[45px] text-sm font-light appearance-none outline-none w-full p-4 rounded-lg"></textarea> 
->>>>>>> 7087220e3ea3e4deb96ddac773370eee5ec3c6d9
+				<textarea
+					bind:value={body}
+					class="h-[45px] text-sm font-light appearance-none outline-none w-full p-4 rounded-lg"
+				/>
 			</div>
 
 			<div class="flex justify-start items-center bg-gray-200">

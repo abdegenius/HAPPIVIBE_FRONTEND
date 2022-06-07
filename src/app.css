@@ -1,3 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.nav-link {
+	@apply hover:text-primary hover:border-b hover:border-b-primary hover:pb-2;
+}
+
+.nav-menu {
+	@apply block hover:text-primary border-b border-b-primary;
+}

@@ -18,7 +18,7 @@
 			if (execute.error == false) {
 				USER.set(execute.data[0]);
 				TOKEN.set(execute.data[1]);
-				if(execute.data[0].status == 'verified'){
+				if (execute.data[0].status == 'verified') {
 					if (execute.data[0].type == 'user') {
 						window.location.assign('/account');
 					}
@@ -28,8 +28,7 @@
 					if (execute.data[0].type == 'admin') {
 						window.location.assign('/admin');
 					}
-				}
-				else{
+				} else {
 					window.location.assign('/verify');
 				}
 			} else {
@@ -42,16 +41,15 @@
 			let token = window.localStorage.getItem('token');
 			let user = window.localStorage.getItem('user');
 			if (token != 'undefined' && token != undefined && token != '') {
-				if($USER && $USER.type == 'user'){
+				if ($USER && $USER.type == 'user') {
 					window.location.assign('/account');
 				}
-				if($USER && $USER.type == 'agent'){
+				if ($USER && $USER.type == 'agent') {
 					window.location.assign('/agent');
 				}
-				if($USER && $USER.type == 'admin'){
+				if ($USER && $USER.type == 'admin') {
 					window.location.assign('/admin');
 				}
-				
 			}
 		}
 	});
@@ -78,7 +76,7 @@
 				<ul class="flex flex-row">
 					<li class="mx-3 sm:mx-6">
 						<a
-							href="/"
+							href="/homepage"
 							class="text-sm sm:text-lg font-light text-black hover:border-b-2 hover:border-black hover:pb-4"
 							>Website Home</a
 						>
