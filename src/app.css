@@ -9,3 +9,7 @@
 .nav-menu {
 	@apply block hover:text-primary border-b border-b-primary;
 }
+
+.nav__link {
+	@apply hover:text-slate-500;
+}

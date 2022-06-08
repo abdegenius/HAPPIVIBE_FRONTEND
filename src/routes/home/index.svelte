@@ -7,7 +7,7 @@
 			<p class="text-primary font-bold md:text-5xl text-2xl leading-snug">
 				We Spread Joy Beyond Calls
 			</p>
-			<p class="md:leading-snug md:text-base text-sm leading-normal">
+			<p class="md:leading-snug md:text-lg text-sm leading-normal">
 				The perfect treat for that special someone! Celebrate, reach out, apologize and check up on
 				your loved ones through us. Let's make them feel loved and special today.
 			</p>
