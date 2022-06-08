@@ -5,7 +5,7 @@
 	<div class="md:grid md:grid-cols-2 md:place-items-center space-y-7">
 		<div class="md:text-left text-center md:space-y-10 space-y-5">
 			<p class="text-primary font-bold md:text-5xl text-2xl leading-snug">
-				We Spread Joy Beyond Calls
+				We are the Uber of Happiness
 			</p>
 			<p class="md:leading-snug md:text-lg text-sm leading-normal">
 				The perfect treat for that special someone! Celebrate, reach out, apologize and check up on
