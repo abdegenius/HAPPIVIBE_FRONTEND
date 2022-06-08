@@ -8,9 +8,9 @@
 	}
 </script>
 
-<nav>
+<nav class="top-0 sticky bg-white">
 	<div
-		class="flex items-center justify-between md:py-8 md:px-24 py-2 px-5 border-b border-b-primary md:mb-5"
+		class="flex items-center justify-between md:py-8 md:px-24 py-2 px-5 border-b border-b-primary md:mb-0 "
 	>
 		<a href="/home"> <h1 class="text-primary font-extrabold text-xl">HappiVibe</h1></a>
 		<div class="space-x-5 font-semibold text- hidden md:block">
@@ -19,7 +19,7 @@
 			<a class="nav-link" href="/home/message">MessageMe Service</a>
 			<a class="nav-link" href="/home/team">Our Team</a>
 			<a class="nav-link" href="/home/contact">Contact Us</a>
-			<a class="nav-link" href="faq">F.A.Qs</a>
+			<a class="nav-link" href="/home/faq">F.A.Qs</a>
 			<a
 				href="/login"
 				class="uppercase bg-primary py-3 px-3 rounded-lg text-white font-semibold border border-primary hover:bg-white hover:text-primary hover:transition-all"
