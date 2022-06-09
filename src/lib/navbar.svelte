@@ -16,7 +16,7 @@
 		<div class="space-x-5 font-semibold text- hidden md:block">
 			<a class="nav-link" href="/home/about">About us</a>
 			<a class="nav-link" href="/home/services">Our Services</a>
-			<a class="nav-link" href="/home/message">MessageMe Service</a>
+			<!-- <a class="nav-link" href="/home/message">MessageMe Service</a> -->
 			<a class="nav-link" href="/home/team">Our Team</a>
 			<a class="nav-link" href="/home/contact">Contact Us</a>
 			<a class="nav-link" href="/home/faq">F.A.Qs</a>
@@ -50,7 +50,7 @@
 		<div class="space-y-2 text-sm px-4 py-4 mobile-menu md:hidden border-t border-t-primary -z-10">
 			<a class="nav-menu" href="/home/about">About us</a>
 			<a class="nav-menu" href="/home/services">Our Services</a>
-			<a class="nav-menu" href="/home/message">MessageMe Service</a>
+			<!-- <a class="nav-menu" href="/home/message">MessageMe Service</a> -->
 			<a class="nav-menu" href="/home/team">Our Team</a>
 			<a class="nav-menu" href="/home/contact">Contact Us</a>
 			<a class="nav-menu mb-2" href="faq">F.A.Qs</a>
