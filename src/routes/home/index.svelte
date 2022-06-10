@@ -1,5 +1,6 @@
 <script>
 	import CallServices from '$lib/callServices.svelte';
+	import PackageServices from '$lib/packageServices.svelte';
 </script>
 
 <div>
@@ -27,12 +28,36 @@
 				/>
 			</div>
 		</div>
-		<div>
+
+		<!-- Call Services -->
+		<div class="my-5">
 			<h2 class="text-primary flex items-center text-lg">
 				<i class="fas fa-square-phone mr-2 fa-2x" /> Call Services
 			</h2>
 			<div class="mt-5 mx-4">
 				<CallServices />
+				<a href="/login"
+					><button
+						class="uppercase bg-primary text-white w-full mt-5 rounded shadow-lg py-3 px-3 text-sm font-semibold"
+						>book a call now</button
+					></a
+				>
+			</div>
+		</div>
+
+		<!-- Happivibe Packages -->
+		<div class="my-5">
+			<h2 class="text-primary flex items-center text-lg">
+				<i class="fas fa-gift mr-2 fa-2x" /> Happivibe Packages
+			</h2>
+			<div class="mt-5 mx-4">
+				<PackageServices />
+				<a href="/login"
+					><button
+						class="uppercase bg-primary text-white w-full mt-5 rounded shadow-lg py-3 px-3 text-sm font-semibold"
+						>book a package now</button
+					></a
+				>
 			</div>
 		</div>
 	</div>
