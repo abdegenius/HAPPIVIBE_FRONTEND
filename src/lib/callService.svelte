@@ -1,0 +1,12 @@
+<script>
+	export let img = '/img/celebratory.svg';
+	export let title = 'Celebratory Call';
+	export let content =
+		'Happivibe Services will call your birthday or anniversary celebrants and "happify" them with		songs they can deeply relate to, read them a sweet poem from you, or pray for them - your choice.';
+</script>
+
+<div class="card text-center p-5 border border-primary rounded space-y-3">
+	<img src={img} alt="" />
+	<h3 class="font-bold text-xl text-primary">{title}</h3>
+	<p class="text-xs">{content}</p>
+</div>

@@ -1,8 +1,9 @@
 <script>
+	import CallServices from '$lib/callServices.svelte';
 </script>
 
 <div>
-	<div class="md:px-36 md:pt-10 pt-10 px-5">
+	<div class="md:px-36 md:pt-10 pt-10 px-5 mb-20">
 		<div class="md:grid md:grid-cols-2 md:place-items-center space-y-7">
 			<div class="md:text-left text-center md:space-y-10 space-y-5">
 				<p class="text-primary font-bold md:text-5xl text-2xl leading-snug">
@@ -24,6 +25,14 @@
 					alt=""
 					class="md:rounded-tr-[5rem] rounded-tr-[3rem] md:rounded-bl-[5rem] rounded-bl-[3rem]"
 				/>
+			</div>
+		</div>
+		<div>
+			<h2 class="text-primary flex items-center text-lg">
+				<i class="fas fa-square-phone mr-2 fa-2x" /> Call Services
+			</h2>
+			<div class="mt-5">
+				<CallServices />
 			</div>
 		</div>
 	</div>
