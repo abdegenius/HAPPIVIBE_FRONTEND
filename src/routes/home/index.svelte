@@ -1,4 +1,6 @@
 <script>
+	import Button from '$lib/button.svelte';
+
 	import CallServices from '$lib/callServices.svelte';
 	import PackageServices from '$lib/packageServices.svelte';
 </script>
@@ -36,12 +38,7 @@
 			</h2>
 			<div class="mt-5 mx-4">
 				<CallServices />
-				<a href="/login"
-					><button
-						class="uppercase bg-primary text-white w-full mt-5 rounded shadow-lg py-3 px-3 text-sm font-semibold"
-						>book a call now</button
-					></a
-				>
+				<Button item="call" />
 			</div>
 		</div>
 
@@ -52,12 +49,7 @@
 			</h2>
 			<div class="mt-5 mx-4">
 				<PackageServices />
-				<a href="/login"
-					><button
-						class="uppercase bg-primary text-white w-full mt-5 rounded shadow-lg py-3 px-3 text-sm font-semibold"
-						>book a package now</button
-					></a
-				>
+				<Button item="package" />
 			</div>
 		</div>
 	</div>

@@ -2,7 +2,7 @@
 	import CallService from './callService.svelte';
 </script>
 
-<div class="space-y-5">
+<div class="space-y-5 md:space-y-0 md:grid md:grid-cols-3 md:mx-10 md:gap-x-8">
 	<CallService
 		img="/img/checkup.svg"
 		title="Happivibe CheckUps"
