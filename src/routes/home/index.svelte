@@ -31,7 +31,7 @@
 			<h2 class="text-primary flex items-center text-lg">
 				<i class="fas fa-square-phone mr-2 fa-2x" /> Call Services
 			</h2>
-			<div class="mt-5">
+			<div class="mt-5 mx-4">
 				<CallServices />
 			</div>
 		</div>
