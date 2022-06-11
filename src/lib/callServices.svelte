@@ -6,21 +6,31 @@
 	<CallService
 		img="/img/celebratory.svg"
 		title="Celebratory Calls"
-		content="Happivibe Services will call your birthday or anniversary celebrants and 'happify' them with		songs they can deeply relate to, read them a sweet poem from you, or pray for them - your choice."
+		content="As the name implies, it's a call made to someone who's celebrating something or to celebrate someone on their special day, or for a special reason."
 	/>
 	<CallService
 		img="/img/appreciation.svg"
-		title="Appreciation Calls"
-		content="If you have a friend or a loved one whom you would love to specially appreciate for being in your life, Happivibe Services will do an excellent job for you!"
+		title="Appreciatory Calls"
+		content="This is the call we make on behalf of our clients to their loved ones to appreciate their loved ones, make them happy, and help them see how special they are."
 	/>
 	<CallService
 		img="/img/reachout.svg"
-		title="Happivibe Reachout"
-		content="Want to reach out and encourage a friend going through hard times? Got a crush and don’t know how to shoot your shots? Clueless on how to reconnect with a friend after a fight? This service is for you."
+		title="Reachout Calls"
+		content="Reach-out calls are made to cheer people up, encourage people, or help people see the need to keep keeping on. It's a call made to someone who's going through a rough phase."
 	/>
 	<CallService
-		img="/img/buddy.svg"
-		title="Personal Happivibe Buddy"
-		content="Happivibe Services has standby personnel who are ever ready to serve you. Are you lonely or bored? Need a laugh or a listening ear? Have a loved one who would appreciate being reached out to? We've got you covered"
+		img="/img/apology.svg"
+		title="Apology Calls"
+		content="This call is made to reconcile people back together. It's made to settle the differences between who is booking the call and who is receiving the call."
+	/>
+	<CallService
+		img="/img/happy.svg"
+		title="Self-Love Calls"
+		content="This is a call you book for your own self. It's a call we make to you who is booking the call, to make you feel good and happy."
+	/>
+	<CallService
+		img="/img/poetry.svg"
+		title="Happivibe Poetry"
+		content="This is a call package that allows our client express their thoughts and emotions through the use of poetry."
 	/>
 </div>

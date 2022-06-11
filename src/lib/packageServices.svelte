@@ -19,11 +19,6 @@
 		content="This package offers you your very own personal comedian; a staff assigned to make you laugh with jokes & funny stories. We could all use a stress reliever in our lives."
 	/>
 	<CallService
-		img="/img/poetry.svg"
-		title="Happivibe Poetry"
-		content="Happivibe has a collection of seasoned poets who are sure to deliver mindblowing poetry, from any genre, to you."
-	/>
-	<CallService
 		img="/img/celebrity.svg"
 		title="Happivibe Celebrity Package"
 		content="Happivibe has celebrities and public figures from music, to movies, to Tv shows, not forgetting on-air-personalities who will be available to call you and make your day."
