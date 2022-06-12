@@ -1,8 +1,8 @@
 <!-- Container for demo purpose -->
-<div class="container my-24 md:px-6 mx-auto">
+<div class="container mt-24 mb-10 md:px-6 mx-auto">
 	<!-- Section: Design Block -->
-	<section class="mb-32 text-gray-800 text-center">
-		<h2 class="text-3xl font-bold mb-12">Testimonials</h2>
+	<section class="text-gray-800 text-center">
+		<h2 class="text-3xl font-bold mb-12 text-primary">Testimonials</h2>
 
 		<div
 			id="carouselExampleCaptions"

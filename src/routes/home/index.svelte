@@ -15,8 +15,8 @@
 					We are the Uber of Happiness
 				</p>
 				<p class="md:leading-snug md:text-lg text-sm leading-normal">
-					The perfect treat for that special someone! Celebrate, reach out, apologize and check up
-					on your loved ones through us. Let's make them feel loved and special today.
+					Happivibe service is an online calling service that gives out happiness and the right
+					amount of vibe with just a call from us to you.
 				</p>
 				<a href="/login" class="uppercase bg-primary py-3 px-4 rounded-lg text-white"
 					><button class="mt-10">Book a Call Now</button></a
@@ -35,28 +35,28 @@
 
 		<!-- Call Services -->
 		<div class="my-5">
-			<h2 class="text-primary flex items-center text-lg">
-				<i class="fas fa-square-phone mr-2 fa-2x" /> Call Services
-			</h2>
+			<h2 class="text-3xl font-bold mb-12 text-primary md:text-left text-center">Call Services</h2>
 			<div class="mt-5 mx-4">
 				<CallServices />
-				<Button item="call" />
+				<Button item="book a call now" />
 			</div>
 		</div>
 
 		<!-- Happivibe Packages -->
 		<div class="my-5">
-			<h2 class="text-primary flex items-center text-lg">
-				<i class="fas fa-gift mr-2 fa-2x" /> Happivibe Packages
+			<h2 class="text-3xl font-bold my-12 text-primary md:text-left text-center">
+				Happivibe Packages
 			</h2>
 			<div class="mt-5 mx-4">
 				<PackageServices />
-				<Button item="package" />
+				<Button item="book a package now" />
 			</div>
 		</div>
 
 		<!-- Stories -->
 		<div class="">
+			<h3 class="text-3xl font-bold mb-5 text-primary md:text-left text-center">Stories</h3>
+			<p class="py-5 text-lg font-semibold">Happivibe's BBC Igbo interview</p>
 			<iframe
 				src="https://www.youtube-nocookie.com/embed/teB0Z87yngk"
 				title="YouTube video player"
@@ -69,8 +69,9 @@
 		<!-- Assurance -->
 		<Assurance />
 	</div>
-	<div>
+	<div class="mb-20">
 		<!-- Testimonials -->
 		<Testimonials />
+		<Button item="read more testimonials" />
 	</div>
 </div>
