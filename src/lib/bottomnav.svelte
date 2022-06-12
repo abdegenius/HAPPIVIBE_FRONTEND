@@ -1,5 +1,5 @@
 <div
-	class="text-center fixed bottom-0 bg-white text-primary border-y border-y-primary w-full pb-3 pt-5 md:hidden text-xs"
+	class="text-center fixed bottom-0 bg-white text-primary border-y border-y-primary w-full pb-3 pt-5 md:hidden text-xs z-40"
 >
 	<div class="flex justify-around">
 		<a href="/home" class="nav__link">

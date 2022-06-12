@@ -4,7 +4,7 @@
 	import Button from '$lib/button.svelte';
 	import CallServices from '$lib/callServices.svelte';
 	import PackageServices from '$lib/packageServices.svelte';
-	import TestimonialCards from '$lib/testimonialCards.svelte';
+	import Testimonials from '$lib/testimonials.svelte';
 </script>
 
 <div>
@@ -54,9 +54,11 @@
 				<Button item="package" />
 			</div>
 		</div>
-		<!-- Testimonials -->
-		<TestimonialCards />
 		<!-- Assurance -->
 		<Assurance />
+	</div>
+	<div>
+		<!-- Testimonials -->
+		<Testimonials />
 	</div>
 </div>

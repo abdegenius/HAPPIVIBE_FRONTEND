@@ -8,7 +8,7 @@
 	}
 </script>
 
-<nav class="top-0 sticky bg-white">
+<nav class="top-0 sticky bg-white z-40">
 	<div
 		class="flex items-center justify-between md:py-8 md:px-24 py-2 px-5 border-b border-b-primary md:mb-0 "
 	>
