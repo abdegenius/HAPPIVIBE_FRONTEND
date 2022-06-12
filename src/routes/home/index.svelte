@@ -54,6 +54,17 @@
 				<Button item="package" />
 			</div>
 		</div>
+
+		<!-- Stories -->
+		<div class="">
+			<iframe
+				src="https://www.youtube-nocookie.com/embed/teB0Z87yngk"
+				title="YouTube video player"
+				frameborder="0"
+				allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+				allowfullscreen
+			/>
+		</div>
 		<!-- Assurance -->
 		<Assurance />
 	</div>
