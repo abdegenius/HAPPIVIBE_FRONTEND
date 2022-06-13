@@ -1,8 +1,9 @@
 <script>
 	import Accordion from './accordion.svelte';
+	import Button from './button.svelte';
 </script>
 
-<div class="md:px-24 px-5 py-10">
+<div class="lg:px-24 md:px-10 px-5 py-10">
 	<div class="md:block hidden">
 		<!-- Appreciatory -->
 		<div class="card md:grid md:grid-cols-2 md:place-items-center md:gap-10">
@@ -96,6 +97,7 @@
 			</div>
 			<img src="/img/poetry.svg" alt="" />
 		</div>
+		<Button link="/login" item="book a call now" />
 	</div>
 
 	<!-- Accordion -->

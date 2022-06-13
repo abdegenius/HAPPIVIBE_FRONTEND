@@ -1,14 +1,19 @@
-<script></script>
+<script>
+	import Button from './button.svelte';
+</script>
 
 <div>
 	<div
-		class="accordion accordion-flush md:grid md:grid-cols-3 md:space-y-0 space-y-5"
+		class="accordion accordion-flush md:grid md:grid-cols-3 md:space-y-0 space-y-10"
 		id="accordionFlush"
 	>
 		<div class="accordion-item">
 			<div>
 				<img src="/img/appreciation.svg" alt="" />
-				<h2 class="accordion-header mb-0" id="flush-headingOne">
+				<h2
+					class="accordion-header border-y-2 border-y-primary mb-0 border-y-2 border-y-primary"
+					id="flush-headingOne"
+				>
 					<button
 						class="accordion-button relative flex items-center w-full py-4 px-5 text-base text-primary font-bold text-left bg-white border-0 rounded-none transition focus:outline-none"
 						type="button"
@@ -39,7 +44,7 @@
 		<div class="accordion-item">
 			<div>
 				<img src="/img/celebratory.svg" alt="" />
-				<h2 class="accordion-header mb-0" id="flush-headingTwo">
+				<h2 class="accordion-header border-y-2 border-y-primary mb-0" id="flush-headingTwo">
 					<button
 						class="accordion-button collapsed relative flex items-center w-full py-4 px-5 text-base text-primary font-bold text-left bg-white border-0 rounded-none transition focus:outline-none"
 						type="button"
@@ -70,7 +75,7 @@
 		<div class="accordion-item ">
 			<div>
 				<img src="/img/reachout.svg" alt="" />
-				<h2 class="accordion-header mb-0" id="flush-headingThree">
+				<h2 class="accordion-header border-y-2 border-y-primary mb-0" id="flush-headingThree">
 					<button
 						class="accordion-button collapsed relative flex items-center w-full py-4 px-5 text-base text-primary font-bold text-left bg-white border-0 rounded-none transition focus:outline-none"
 						type="button"
@@ -101,7 +106,7 @@
 		<div class="accordion-item ">
 			<div>
 				<img src="/img/apology.svg" alt="" />
-				<h2 class="accordion-header mb-0" id="flush-headingFour">
+				<h2 class="accordion-header border-y-2 border-y-primary mb-0" id="flush-headingFour">
 					<button
 						class="accordion-button collapsed relative flex items-center w-full py-4 px-5 text-base text-primary font-bold text-left bg-white border-0 rounded-none transition focus:outline-none"
 						type="button"
@@ -131,7 +136,7 @@
 		<div class="accordion-item ">
 			<div>
 				<img src="/img/happy.svg" alt="" />
-				<h2 class="accordion-header mb-0" id="flush-headingFive">
+				<h2 class="accordion-header border-y-2 border-y-primary mb-0" id="flush-headingFive">
 					<button
 						class="accordion-button collapsed relative flex items-center w-full py-4 px-5 text-base text-primary font-bold text-left bg-white border-0 rounded-none transition focus:outline-none"
 						type="button"
@@ -162,7 +167,7 @@
 		<div class="accordion-item ">
 			<div>
 				<img src="/img/poetry.svg" alt="" />
-				<h2 class="accordion-header mb-0" id="flush-headingSix">
+				<h2 class="accordion-header border-y-2 border-y-primary mb-0" id="flush-headingSix">
 					<button
 						class="accordion-button collapsed relative flex items-center w-full py-4 px-5 text-base text-primary font-bold text-left bg-white border-0 rounded-none transition focus:outline-none"
 						type="button"
@@ -202,5 +207,6 @@
 				</div>
 			</div>
 		</div>
+		<Button link="/login" item="book a call now" />
 	</div>
 </div>
