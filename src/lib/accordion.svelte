@@ -10,10 +10,7 @@
 		<div class="accordion-item">
 			<div>
 				<img src="/img/appreciation.svg" alt="" />
-				<h2
-					class="accordion-header border-y-2 border-y-primary mb-0 border-y-2 border-y-primary"
-					id="flush-headingOne"
-				>
+				<h2 class="accordion-header border-y-2 border-y-primary mb-0" id="flush-headingOne">
 					<button
 						class="accordion-button relative flex items-center w-full py-4 px-5 text-base text-primary font-bold text-left bg-white border-0 rounded-none transition focus:outline-none"
 						type="button"
