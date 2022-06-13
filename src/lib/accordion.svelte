@@ -10,7 +10,7 @@
 				<img src="/img/appreciation.svg" alt="" />
 				<h2 class="accordion-header mb-0" id="flush-headingOne">
 					<button
-						class="accordion-button relative flex items-center w-full py-4 px-5 text-base text-gray-800 text-left bg-white border-0 rounded-none transition focus:outline-none"
+						class="accordion-button relative flex items-center w-full py-4 px-5 text-base text-primary font-bold text-left bg-white border-0 rounded-none transition focus:outline-none"
 						type="button"
 						data-bs-toggle="collapse"
 						data-bs-target="#flush-collapseOne"
@@ -41,7 +41,7 @@
 				<img src="/img/celebratory.svg" alt="" />
 				<h2 class="accordion-header mb-0" id="flush-headingTwo">
 					<button
-						class="accordion-button collapsed relative flex items-center w-full py-4 px-5 text-base text-gray-800 text-left bg-white border-0 rounded-none transition focus:outline-none"
+						class="accordion-button collapsed relative flex items-center w-full py-4 px-5 text-base text-primary font-bold text-left bg-white border-0 rounded-none transition focus:outline-none"
 						type="button"
 						data-bs-toggle="collapse"
 						data-bs-target="#flush-collapseTwo"
@@ -72,7 +72,7 @@
 				<img src="/img/reachout.svg" alt="" />
 				<h2 class="accordion-header mb-0" id="flush-headingThree">
 					<button
-						class="accordion-button collapsed relative flex items-center w-full py-4 px-5 text-base text-gray-800 text-left bg-white border-0 rounded-none transition focus:outline-none"
+						class="accordion-button collapsed relative flex items-center w-full py-4 px-5 text-base text-primary font-bold text-left bg-white border-0 rounded-none transition focus:outline-none"
 						type="button"
 						data-bs-toggle="collapse"
 						data-bs-target="#flush-collapseThree"
@@ -103,7 +103,7 @@
 				<img src="/img/apology.svg" alt="" />
 				<h2 class="accordion-header mb-0" id="flush-headingFour">
 					<button
-						class="accordion-button collapsed relative flex items-center w-full py-4 px-5 text-base text-gray-800 text-left bg-white border-0 rounded-none transition focus:outline-none"
+						class="accordion-button collapsed relative flex items-center w-full py-4 px-5 text-base text-primary font-bold text-left bg-white border-0 rounded-none transition focus:outline-none"
 						type="button"
 						data-bs-toggle="collapse"
 						data-bs-target="#flush-collapseFour"
@@ -133,7 +133,7 @@
 				<img src="/img/happy.svg" alt="" />
 				<h2 class="accordion-header mb-0" id="flush-headingFive">
 					<button
-						class="accordion-button collapsed relative flex items-center w-full py-4 px-5 text-base text-gray-800 text-left bg-white border-0 rounded-none transition focus:outline-none"
+						class="accordion-button collapsed relative flex items-center w-full py-4 px-5 text-base text-primary font-bold text-left bg-white border-0 rounded-none transition focus:outline-none"
 						type="button"
 						data-bs-toggle="collapse"
 						data-bs-target="#flush-collapseFive"
@@ -164,7 +164,7 @@
 				<img src="/img/poetry.svg" alt="" />
 				<h2 class="accordion-header mb-0" id="flush-headingSix">
 					<button
-						class="accordion-button collapsed relative flex items-center w-full py-4 px-5 text-base text-gray-800 text-left bg-white border-0 rounded-none transition focus:outline-none"
+						class="accordion-button collapsed relative flex items-center w-full py-4 px-5 text-base text-primary font-bold text-left bg-white border-0 rounded-none transition focus:outline-none"
 						type="button"
 						data-bs-toggle="collapse"
 						data-bs-target="#flush-collapseSix"
@@ -181,12 +181,24 @@
 				aria-labelledby="flush-headingSix"
 				data-bs-parent="#accordionFlush"
 			>
-				<div class="accordion-body py-4 px-5 text-sm text-justify">
-					As the name implies, it's a call made to someone who's celebrating something or to
-					celebrate someone on their special day, or for a special reason. It could be to celebrate
-					someone and make them feel special on their birthday. It could be to celebrate who is
-					getting married or who just got married. School graduation. House opening. Any special
-					occasion at all, just to celebrate who is having the spotlight that season.
+				<div class="accordion-body py-4 px-5 text-sm text-justify space-y-3">
+					<p>
+						This is a call package that allows our client express their thoughts and emotions
+						through the use of poetry.
+					</p>
+
+					<p>
+						A client tells us what the message of the poem would be about. Our poetry team then
+						writes a poem around what the client wants. Then, Happivibe makes a call to whom the
+						client wants us to call and we say the poem to the person.
+					</p>
+
+					<p>
+						It could be to express how much our client loves someone. It could be to cheer up who is
+						going through a rough phase. It could be to celebrate someone on their special day.
+					</p>
+
+					<p>We write a poem for them and make a call to them, on behalf of our client.</p>
 				</div>
 			</div>
 		</div>
