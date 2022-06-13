@@ -15,11 +15,11 @@
 		<div>
 			<!-- <h3 class="text-3xl font-bold">Links</h3> -->
 			<div class="space-y-3 pt-3">
-				<a class="block" href="/about">About Us</a>
-				<a class="block" href="/services">Services</a>
-				<a class="block" href="/team">Team</a>
-				<a class="block" href="/contact">Contact</a>
-				<a class="block" href="/faq">F.A.Qs</a>
+				<a class="block" href="/home/about">About Us</a>
+				<a class="block" href="/home/services">Services</a>
+				<a class="block" href="/home/team">Team</a>
+				<a class="block" href="/home/contact">Contact</a>
+				<a class="block" href="/home/faq">F.A.Qs</a>
 			</div>
 		</div>
 		<div>
