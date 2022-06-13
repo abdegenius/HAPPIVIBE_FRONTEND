@@ -10,9 +10,9 @@
 
 <nav class="top-0 sticky bg-white z-40">
 	<div
-		class="flex items-center justify-between md:py-8 md:px-24 py-2 px-5 border-b border-b-primary md:mb-0 "
+		class="flex items-center justify-between md:py-8 lg:px-24 md:px-14 py-2 px-5 border-b border-b-primary md:mb-0 "
 	>
-		<a href="/home"> <h1 class="text-primary font-extrabold text-xl">HappiVibe</h1></a>
+		<a href="/home"> <img src="/logo.png" alt="" class="md:w-32 w-24" /></a>
 		<div class="space-x-5 font-semibold text- hidden md:block">
 			<a class="nav-link" href="/home/about">About us</a>
 			<a class="nav-link" href="/home/services">Our Services</a>

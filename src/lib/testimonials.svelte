@@ -5,7 +5,7 @@
 		<h2 class="text-3xl font-bold mb-12 text-primary">Testimonials</h2>
 
 		<div
-			id="carouselExampleCaptions"
+			id="testimonialCaption"
 			class="carousel slide relative carousel-dark"
 			data-bs-ride="carousel"
 		>
@@ -95,7 +95,7 @@
 			<button
 				class="carousel-control-prev absolute top-0 bottom-0 text-primary flex items-center md:justify-center justify-start p-0 text-center border-0 hover:outline-none hover:no-underline focus:outline-none focus:no-underline left-0"
 				type="button"
-				data-bs-target="#carouselExampleCaptions"
+				data-bs-target="#testimonialCaption"
 				data-bs-slide="prev"
 			>
 				<span class="carousel-control-prev-icon inline-block bg-no-repeat" aria-hidden="true" />
@@ -104,7 +104,7 @@
 			<button
 				class="carousel-control-next absolute top-0 bottom-0 flex items-center md:justify-center justify-end p-0 text-center border-0 hover:outline-none hover:no-underline focus:outline-none focus:no-underline right-0"
 				type="button"
-				data-bs-target="#carouselExampleCaptions"
+				data-bs-target="#testimonialCaption"
 				data-bs-slide="next"
 			>
 				<span class="carousel-control-next-icon inline-block bg-no-repeat" aria-hidden="true" />

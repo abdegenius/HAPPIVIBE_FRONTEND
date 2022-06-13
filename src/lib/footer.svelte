@@ -5,9 +5,15 @@
 
 <div class="bg-primary text-white pt-8 md:px-10 md:text-left text-center md:pb-0 pb-20">
 	<div class="md:grid md:grid-cols-3 md:space-y-0 space-y-5">
-		<h3 class="text-3xl font-bold">Happivibe</h3>
+		<div class="md:block hidden space-y-2">
+			<h3 class="text-3xl font-bold">Happivibe</h3>
+			<p class="text-base pr-10 text-justify">
+				An online calling service that gives out happiness and the right amount of vibe with just a
+				call from us to you.
+			</p>
+		</div>
 		<div>
-			<h3 class="text-3xl font-bold">Links</h3>
+			<!-- <h3 class="text-3xl font-bold">Links</h3> -->
 			<div class="space-y-3 pt-3">
 				<a class="block" href="/about">About Us</a>
 				<a class="block" href="/services">Services</a>
@@ -17,7 +23,7 @@
 			</div>
 		</div>
 		<div>
-			<h3 class="text-3xl font-bold">Socials</h3>
+			<!-- <h3 class="text-3xl font-bold">Socials</h3> -->
 			<div class="space-x-5 pt-3">
 				<a class="" href="https://twitter.com/Hapivibe1?s=09"><i class="fab fa-facebook fa-xl" /></a
 				>

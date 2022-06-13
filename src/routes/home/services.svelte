@@ -1,5 +1,9 @@
 <script>
 	import Hero from '$lib/hero.svelte';
+	import Service from '$lib/service.svelte';
 </script>
 
-<Hero />
+<div>
+	<Hero pageID="Our Services" />
+	<Service />
+</div>

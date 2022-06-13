@@ -1,4 +1,5 @@
 <script>
+	import Stories from './../../lib/stories.svelte';
 	import Assurance from '$lib/assurance.svelte';
 
 	import Button from '$lib/button.svelte';
@@ -38,7 +39,7 @@
 			<h2 class="text-3xl font-bold mb-12 text-primary md:text-left text-center">Call Services</h2>
 			<div class="mt-5 mx-4">
 				<CallServices />
-				<Button item="book a call now" />
+				<Button item="more information" link="/home/services" />
 			</div>
 		</div>
 
@@ -56,22 +57,19 @@
 		<!-- Stories -->
 		<div class="">
 			<h3 class="text-3xl font-bold mb-5 text-primary md:text-left text-center">Stories</h3>
-			<p class="py-5 text-lg font-semibold">Happivibe's BBC Igbo interview</p>
-			<iframe
-				src="https://www.youtube-nocookie.com/embed/teB0Z87yngk"
-				title="YouTube video player"
-				frameborder="0"
-				allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-				allowfullscreen
-				class="w-full md:h-[500px]"
-			/>
+			<div class="">
+				<Stories />
+			</div>
 		</div>
+
 		<!-- Assurance -->
 		<Assurance />
 	</div>
 	<div class="mb-20">
 		<!-- Testimonials -->
 		<Testimonials />
-		<Button item="read more testimonials" />
+		<div class="w-[80%] mx-auto ">
+			<Button item="read more testimonials" />
+		</div>
 	</div>
 </div>
