@@ -13,7 +13,7 @@
 	import { Pagination } from 'swiper';
 </script>
 
-<div class="space-y-5 md:space-y-0 md:grid md:grid-cols-3 md:mx-10 md:gap-x-8 md:block hidden">
+<div class="space-y-5 md:space-y-0 md:grid md:grid-cols-3 lg:mx-8 md:mx-5 md:gap-8 md:block hidden">
 	<CallService
 		img="/img/celebratory.svg"
 		title="Celebratory Calls"
@@ -54,15 +54,15 @@
 		}}
 		breakpoints={{
 			'640': {
-				slidesPerView: 2,
+				slidesPerView: 1,
 				spaceBetween: 20
 			},
 			'768': {
-				slidesPerView: 4,
+				slidesPerView: 2,
 				spaceBetween: 40
 			},
 			'1024': {
-				slidesPerView: 5,
+				slidesPerView: 3,
 				spaceBetween: 50
 			}
 		}}

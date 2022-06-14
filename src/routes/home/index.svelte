@@ -9,7 +9,7 @@
 </script>
 
 <div>
-	<div class="md:px-36 md:pt-10 pt-10 px-5 mb-20">
+	<div class="lg:px-28 md:px-20 md:pt-10 pt-10 px-5 mb-20">
 		<div class="md:grid md:grid-cols-2 md:place-items-center space-y-7">
 			<div class="md:text-left text-center md:space-y-10 space-y-5">
 				<p class="text-primary font-bold md:text-5xl text-2xl leading-snug">
