@@ -43,6 +43,7 @@
     "moment": "^2.29.3",
     "notiflix": "^3.2.5",
     "svelte-hmr": "^0.14.11",
-    "svelte-local-storage-store": "^0.2.6"
+    "svelte-local-storage-store": "^0.2.6",
+    "swiper": "^8.2.4"
   }
 }

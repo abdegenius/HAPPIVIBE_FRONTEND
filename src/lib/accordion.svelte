@@ -12,12 +12,13 @@
 				<img src="/img/appreciation.svg" alt="" />
 				<h2 class="accordion-header border-y-2 border-y-primary mb-0" id="flush-headingOne">
 					<button
-						class="accordion-button relative flex items-center w-full py-4 px-5 text-base text-primary font-bold text-left bg-white border-0 rounded-none transition focus:outline-none"
+						class="accordion-button relative active:text-primary flex items-center w-full py-4 px-5 text-base text-primary font-bold text-left bg-white border-0 rounded-none transition focus:outline-none"
 						type="button"
 						data-bs-toggle="collapse"
 						data-bs-target="#flush-collapseOne"
 						aria-expanded="false"
 						aria-controls="flush-collapseOne"
+						style="color: #FFA500;"
 					>
 						Appreciatory Calls
 					</button>
@@ -49,6 +50,7 @@
 						data-bs-target="#flush-collapseTwo"
 						aria-expanded="false"
 						aria-controls="flush-collapseTwo"
+						style="color: #FFA500;"
 					>
 						Celebratory
 					</button>
@@ -80,6 +82,7 @@
 						data-bs-target="#flush-collapseThree"
 						aria-expanded="false"
 						aria-controls="flush-collapseThree"
+						style="color: #FFA500;"
 					>
 						Reach-Out Calls
 					</button>
@@ -111,6 +114,7 @@
 						data-bs-target="#flush-collapseFour"
 						aria-expanded="false"
 						aria-controls="flush-collapseFour"
+						style="color: #FFA500;"
 					>
 						Apology Calls
 					</button>
@@ -141,6 +145,7 @@
 						data-bs-target="#flush-collapseFive"
 						aria-expanded="false"
 						aria-controls="flush-collapseFive"
+						style="color: #FFA500;"
 					>
 						Self-Love Calls
 					</button>
@@ -172,6 +177,7 @@
 						data-bs-target="#flush-collapseSix"
 						aria-expanded="false"
 						aria-controls="flush-collapseSix"
+						style="color: #FFA500;"
 					>
 						HappiVibe Poetry
 					</button>
