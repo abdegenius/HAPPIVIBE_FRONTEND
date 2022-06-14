@@ -40,7 +40,7 @@
 </div> -->
 
 <footer class="border-t border-t-primary">
-	<div class="container md:pb-0 pb-20 px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
+	<div class="container md:pb-8 pb-20 px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
 		<a
 			class="flex title-font font-medium items-center md:justify-start justify-center text-gray-900"
 			href="/home"

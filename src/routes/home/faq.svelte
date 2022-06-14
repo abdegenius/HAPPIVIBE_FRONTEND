@@ -20,7 +20,7 @@
 				<div class="w-full lg:w-1/2 px-4 py-2">
 					<details class="mb-4">
 						<summary class="font-semibold  bg-gray-200 rounded-md py-2 px-4">
-							What is HappiVibe all about?
+							How do I book a call?
 						</summary>
 
 						<span>
@@ -30,7 +30,7 @@
 					</details>
 					<details class="mb-4">
 						<summary class="font-semibold bg-gray-200 rounded-md py-2 px-4">
-							What is HappiVibe all about?
+							What is the duration of the call?
 						</summary>
 
 						<span>
@@ -40,10 +40,20 @@
 					</details>
 					<details class="mb-4">
 						<summary class="font-semibold  bg-gray-200 rounded-md py-2 px-4">
-							What is HappiVibe all about?
+							How do I make payment for a call I'm booking?
 						</summary>
 
 						<span>
+							Laboris qui labore cillum culpa in sunt quis sint veniam. Dolore ex aute deserunt esse
+							ipsum elit aliqua. Aute quis minim velit nostrud pariatur culpa magna in aute.
+						</span>
+					</details>
+					<details class="mb-4">
+						<summary class="font-semibold  bg-gray-200 rounded-md py-2 px-4">
+							What if the person I'm booking this call for doesn't pick up?
+						</summary>
+
+						<span class="px-4 py-2">
 							Laboris qui labore cillum culpa in sunt quis sint veniam. Dolore ex aute deserunt esse
 							ipsum elit aliqua. Aute quis minim velit nostrud pariatur culpa magna in aute.
 						</span>
@@ -52,7 +62,7 @@
 				<div class="w-full lg:w-1/2 px-4 py-2">
 					<details class="mb-4">
 						<summary class="font-semibold  bg-gray-200 rounded-md py-2 px-4">
-							What is HappiVibe all about?
+							Do I pay before the call is made or after the call is made?
 						</summary>
 
 						<span class="px-4 py-2">
@@ -62,7 +72,7 @@
 					</details>
 					<details class="mb-4">
 						<summary class="font-semibold  bg-gray-200 rounded-md py-2 px-4">
-							What is HappiVibe all about?
+							Who will be the one to make my call?
 						</summary>
 
 						<span class="px-4 py-2">
@@ -72,7 +82,18 @@
 					</details>
 					<details class="mb-4">
 						<summary class="font-semibold  bg-gray-200 rounded-md py-2 px-4">
-							What is HappiVibe all about?
+							Do you make calls to countries outside Nigeria? If yes, how much are your
+							international calls?
+						</summary>
+
+						<span class="px-4 py-2">
+							Laboris qui labore cillum culpa in sunt quis sint veniam. Dolore ex aute deserunt esse
+							ipsum elit aliqua. Aute quis minim velit nostrud pariatur culpa magna in aute.
+						</span>
+					</details>
+					<details class="mb-4">
+						<summary class="font-semibold  bg-gray-200 rounded-md py-2 px-4">
+							How much do you charge for a call?
 						</summary>
 
 						<span class="px-4 py-2">
