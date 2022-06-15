@@ -20,64 +20,51 @@
 				<div class="w-full lg:w-1/2 px-4 py-2">
 					<details class="mb-4">
 						<summary class="font-semibold  bg-gray-200 rounded-md py-2 px-4">
-							How do I book a call?
-						</summary>
-
-						<span>
-							Laboris qui labore cillum culpa in sunt quis sint veniam. Dolore ex aute deserunt esse
-							ipsum elit aliqua. Aute quis minim velit nostrud pariatur culpa magna in aute.
-						</span>
-					</details>
-					<details class="mb-4">
-						<summary class="font-semibold bg-gray-200 rounded-md py-2 px-4">
 							What is the duration of the call?
 						</summary>
 
 						<span>
-							Laboris qui labore cillum culpa in sunt quis sint veniam. Dolore ex aute deserunt esse
-							ipsum elit aliqua. Aute quis minim velit nostrud pariatur culpa magna in aute.
+							Our calls are not timed. The duration of a call is solely dependent on the flow of
+							conversation between our caller and whom we call.
 						</span>
 					</details>
 					<details class="mb-4">
-						<summary class="font-semibold  bg-gray-200 rounded-md py-2 px-4">
+						<summary class="font-semibold bg-gray-200 rounded-md py-2 px-4">
 							How do I make payment for a call I'm booking?
 						</summary>
 
 						<span>
-							Laboris qui labore cillum culpa in sunt quis sint veniam. Dolore ex aute deserunt esse
-							ipsum elit aliqua. Aute quis minim velit nostrud pariatur culpa magna in aute.
+							You can make payment using any of the payment options as provided by paystack on our
+							website.
 						</span>
 					</details>
-					<details class="mb-4">
-						<summary class="font-semibold  bg-gray-200 rounded-md py-2 px-4">
-							What if the person I'm booking this call for doesn't pick up?
-						</summary>
-
-						<span class="px-4 py-2">
-							Laboris qui labore cillum culpa in sunt quis sint veniam. Dolore ex aute deserunt esse
-							ipsum elit aliqua. Aute quis minim velit nostrud pariatur culpa magna in aute.
-						</span>
-					</details>
-				</div>
-				<div class="w-full lg:w-1/2 px-4 py-2">
 					<details class="mb-4">
 						<summary class="font-semibold  bg-gray-200 rounded-md py-2 px-4">
 							Do I pay before the call is made or after the call is made?
 						</summary>
 
-						<span class="px-4 py-2">
-							Laboris qui labore cillum culpa in sunt quis sint veniam. Dolore ex aute deserunt esse
-							ipsum elit aliqua. Aute quis minim velit nostrud pariatur culpa magna in aute.
-						</span>
+						<span> You pay before a call is to be made. </span>
 					</details>
 					<details class="mb-4">
 						<summary class="font-semibold  bg-gray-200 rounded-md py-2 px-4">
 							Who will be the one to make my call?
 						</summary>
 
-						<span class="px-4 py-2">
-							Laboris qui labore cillum culpa in sunt quis sint veniam. Dolore ex aute deserunt esse
-							ipsum elit aliqua. Aute quis minim velit nostrud pariatur culpa magna in aute.
+						<span class="">
+							We have a team of trained Happivibe callers. One of them who perfectly fits to handle
+							your call will make your call.
+						</span>
+					</details>
+				</div>
+				<div class="w-full lg:w-1/2 px-4 py-2">
+					<details class="mb-4">
+						<summary class="font-semibold  bg-gray-200 rounded-md py-2 px-4">
+							Who will be the one to make my call?
+						</summary>
+
+						<span class="">
+							We have a team of trained Happivibe callers. One of them who perfectly fits to handle
+							your call will make your call.
 						</span>
 					</details>
 					<details class="mb-4">
@@ -86,9 +73,9 @@
 							international calls?
 						</summary>
 
-						<span class="px-4 py-2">
-							Laboris qui labore cillum culpa in sunt quis sint veniam. Dolore ex aute deserunt esse
-							ipsum elit aliqua. Aute quis minim velit nostrud pariatur culpa magna in aute.
+						<span class="">
+							Yes, we make international calls. Kindly visit the call booking prompt and select the
+							country you want us to call, and you'll see the amount you're to pay right there.
 						</span>
 					</details>
 					<details class="mb-4">
@@ -96,9 +83,20 @@
 							How much do you charge for a call?
 						</summary>
 
-						<span class="px-4 py-2">
-							Laboris qui labore cillum culpa in sunt quis sint veniam. Dolore ex aute deserunt esse
-							ipsum elit aliqua. Aute quis minim velit nostrud pariatur culpa magna in aute.
+						<span class="">
+							All local calls are 1,000 naira. For international calls, the amount depends on what
+							country we are to call.
+						</span>
+					</details>
+					<details class="mb-4">
+						<summary class="font-semibold  bg-gray-200 rounded-md py-2 px-4">
+							What if the person I'm booking this call for doesn't pick up?
+						</summary>
+
+						<span class="">
+							We will call them more than once, and give the person intervals to retry calling them.
+							If we do not get to them eventually, we would give you a feedback on what else could
+							be done.
 						</span>
 					</details>
 				</div>

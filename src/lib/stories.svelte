@@ -1,85 +1,60 @@
-<script></script>
+<script>
+	import { Swiper, SwiperSlide } from 'swiper/svelte';
 
-<div>
-	<div id="videoCaption" class="carousel carousel-fade relative" data-bs-ride="carousel">
-		<div class="carousel-indicators absolute right-0 bottom-0 left-0 flex justify-center p-0 mb-4">
-			<button
-				type="button"
-				data-bs-target="#videoCaption"
-				data-bs-slide-to="0"
-				class="active"
-				aria-current="true"
-				aria-label="Slide 1"
-			/>
-			<button
-				type="button"
-				data-bs-target="#videoCaption"
-				data-bs-slide-to="1"
-				aria-label="Slide 2"
-			/>
-			<!-- <button
-				type="button"
-				data-bs-target="#videoCaption"
-				data-bs-slide-to="2"
-				aria-label="Slide 3"
-			/> -->
-		</div>
-		<div class="carousel-inner relative w-full overflow-hidden">
-			<div class="carousel-item active relative float-left w-full">
-				<iframe
-					src="https://www.youtube-nocookie.com/embed/teB0Z87yngk"
-					title="YouTube video player"
-					frameborder="0"
-					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-					allowfullscreen
-					class="w-full md:h-[500px]"
-				/>
-				<div class="carousel-caption hidden md:block absolute text-center">
-					<h5 class="text-xl">Happivibe's BBC Igbo interview</h5>
-					<p>Some representative placeholder content for the first slide.</p>
-				</div>
-			</div>
-			<div class="carousel-item relative float-left w-full">
-				<iframe
-					src="https://www.youtube.com/embed/40cOTSZ7MhA"
-					title="YouTube video player"
-					frameborder="0"
-					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-					allowfullscreen
-					class="w-full md:h-[500px]"
-				/>
-				<div class="carousel-caption hidden md:block absolute text-center">
-					<h5 class="text-xl">Stained shoes; The story of a resilient girl, Gechi.</h5>
-					<p>Some representative placeholder content for the second slide.</p>
-				</div>
-			</div>
-			<!-- <div class="carousel-item relative float-left w-full">
-				<video class="w-full" autoplay loop muted>
-					<source src="https://mdbcdn.b-cdn.net/img/video/Agua-natural.mp4" type="video/mp4" />
-				</video>
-				<div class="carousel-caption hidden md:block absolute text-center">
-					<h5 class="text-xl">Third slide label</h5>
-					<p>Some representative placeholder content for the third slide.</p>
-				</div>
-			</div> -->
-		</div>
-		<button
-			class="carousel-control-prev absolute top-0 bottom-0 flex items-center justify-center p-0 text-center border-0 hover:outline-none hover:no-underline focus:outline-none focus:no-underline left-0"
-			type="button"
-			data-bs-target="#videoCaption"
-			data-bs-slide="prev"
+	// Import Swiper styles
+	import 'swiper/css';
+
+	import '../style.css';
+
+	import 'swiper/css/pagination';
+
+	// import required modules
+	import { Pagination } from 'swiper';
+</script>
+
+<div class="">
+	<Swiper
+		slidesPerView={1}
+		spaceBetween={10}
+		pagination={{
+			clickable: true
+		}}
+		breakpoints={{
+			'640': {
+				slidesPerView: 1,
+				spaceBetween: 20
+			},
+			'768': {
+				slidesPerView: 1,
+				spaceBetween: 40
+			},
+			'1024': {
+				slidesPerView: 1,
+				spaceBetween: 50
+			}
+		}}
+		modules={[Pagination]}
+		class="mySwiper"
+	>
+		<SwiperSlide
+			><iframe
+				src="https://www.youtube.com/embed/40cOTSZ7MhA"
+				title="YouTube video player"
+				frameborder="0"
+				allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+				allowfullscreen
+				class="w-full md:h-[500px]"
+			/></SwiperSlide
 		>
-			<span class="carousel-control-prev-icon inline-block bg-no-repeat" aria-hidden="true" />
-			<span class="visually-hidden">Previous</span>
-		</button>
-		<button
-			class="carousel-control-next absolute top-0 bottom-0 flex items-center justify-center p-0 text-center border-0 hover:outline-none hover:no-underline focus:outline-none focus:no-underline right-0"
-			type="button"
-			data-bs-target="#videoCaption"
-			data-bs-slide="next"
+		<SwiperSlide
+			><iframe
+				src="https://www.youtube-nocookie.com/embed/teB0Z87yngk"
+				title="YouTube video player"
+				frameborder="0"
+				allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+				allowfullscreen
+				class="w-full md:h-[500px]"
+			/></SwiperSlide
 		>
-			<span class="carousel-control-next-icon inline-block bg-no-repeat" aria-hidden="true" />
-			<span class="visually-hidden">Next</span>
-		</button>
-	</div>
+	</Swiper>
 </div>

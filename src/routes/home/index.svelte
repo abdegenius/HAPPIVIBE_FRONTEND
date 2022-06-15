@@ -6,34 +6,12 @@
 	import CallServices from '$lib/callServices.svelte';
 	import PackageServices from '$lib/packageServices.svelte';
 	import Testimonials from '$lib/testimonials.svelte';
+	import HomeHero from '$lib/homeHero.svelte';
 </script>
 
 <div>
+	<HomeHero />
 	<div class="lg:px-28 md:px-20 md:pt-10 pt-10 px-5 mb-20">
-		<div class="md:grid md:grid-cols-2 md:place-items-center space-y-7">
-			<div class="md:text-left text-center md:space-y-10 space-y-5">
-				<p class="text-primary font-bold md:text-5xl text-2xl leading-snug">
-					We are the Uber of Happiness
-				</p>
-				<p class="md:leading-snug md:text-lg text-sm leading-normal">
-					Happivibe service is an online calling service that gives out happiness and the right
-					amount of vibe with just a call from us to you.
-				</p>
-				<a href="/login" class="uppercase bg-primary py-3 px-4 rounded-lg text-white"
-					><button class="mt-10">Book a Call Now</button></a
-				>
-			</div>
-			<div
-				class="w-[70%] mx-auto md:border-4 border-2 border-primary md:rounded-tr-[5rem] rounded-tr-[3rem] md:rounded-bl-[5rem] rounded-bl-[3rem] md:p-3 p-1"
-			>
-				<img
-					src="/img/form.png"
-					alt=""
-					class="md:rounded-tr-[5rem] rounded-tr-[3rem] md:rounded-bl-[5rem] rounded-bl-[3rem]"
-				/>
-			</div>
-		</div>
-
 		<!-- Call Services -->
 		<div class="my-5">
 			<h2 class="text-3xl font-bold mb-12 text-primary md:text-left text-center">Call Services</h2>
@@ -56,7 +34,9 @@
 
 		<!-- Stories -->
 		<div class="">
-			<h3 class="text-3xl font-bold mb-5 text-primary md:text-left text-center">Stories</h3>
+			<h3 class="md:text-3xl text-xl md:py-4 font-bold mb-5 text-primary md:text-left text-center">
+				See how Happivibe is changing our society
+			</h3>
 			<div class="">
 				<Stories />
 			</div>
