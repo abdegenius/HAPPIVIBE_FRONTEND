@@ -76,7 +76,7 @@
 				<ul class="flex flex-row">
 					<li class="mx-3 sm:mx-6">
 						<a
-							href="/homepage"
+							href="/home"
 							class="text-sm sm:text-lg font-light text-black hover:border-b-2 hover:border-black hover:pb-4"
 							>Website Home</a
 						>

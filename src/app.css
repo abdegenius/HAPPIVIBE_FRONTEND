@@ -7,7 +7,7 @@
 }
 
 .nav-menu {
-	@apply block hover:text-primary border-b border-b-primary;
+	@apply block hover:text-primary border-b border-b-primary pb-2;
 }
 
 .nav__link {
