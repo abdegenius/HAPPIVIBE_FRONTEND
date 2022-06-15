@@ -22,7 +22,7 @@
 		</div>
 
 		<!-- Happivibe Packages -->
-		<div class="my-5">
+		<!-- <div class="my-5">
 			<h2 class="text-3xl font-bold my-12 text-primary md:text-left text-center">
 				Happivibe Packages
 			</h2>
@@ -30,7 +30,7 @@
 				<PackageServices />
 				<Button item="book a package now" />
 			</div>
-		</div>
+		</div> -->
 
 		<!-- Stories -->
 		<div class="">

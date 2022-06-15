@@ -10,6 +10,8 @@
 
 	// import required modules
 	import { Pagination } from 'swiper';
+	import Gechi from './gechi.svelte';
+	import Interview from './interview.svelte';
 </script>
 
 <div class="">
@@ -29,32 +31,14 @@
 				spaceBetween: 40
 			},
 			'1024': {
-				slidesPerView: 1,
+				slidesPerView: 2,
 				spaceBetween: 50
 			}
 		}}
 		modules={[Pagination]}
 		class="mySwiper"
 	>
-		<SwiperSlide
-			><iframe
-				src="https://www.youtube.com/embed/40cOTSZ7MhA"
-				title="YouTube video player"
-				frameborder="0"
-				allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-				allowfullscreen
-				class="w-full md:h-[500px]"
-			/></SwiperSlide
-		>
-		<SwiperSlide
-			><iframe
-				src="https://www.youtube-nocookie.com/embed/teB0Z87yngk"
-				title="YouTube video player"
-				frameborder="0"
-				allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-				allowfullscreen
-				class="w-full md:h-[500px]"
-			/></SwiperSlide
-		>
+		<SwiperSlide><Gechi /></SwiperSlide>
+		<SwiperSlide><Interview /></SwiperSlide>
 	</Swiper>
 </div>

@@ -2,7 +2,7 @@
 <div class="container mt-24 mb-10 md:px-6 mx-auto">
 	<!-- Section: Design Block -->
 	<section class="text-gray-800 text-center">
-		<h2 class="text-3xl font-bold mb-12 text-primary capitalize">
+		<h2 class="md:text-3xl text-2xl md:px-6 px-6 font-bold mb-12 text-primary capitalize">
 			Hear what our clients have to say
 		</h2>
 
