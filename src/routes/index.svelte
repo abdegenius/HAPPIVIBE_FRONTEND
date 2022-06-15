@@ -1,8 +1,7 @@
 <script>
-import { browser } from "$app/env";
+	import { browser } from '$app/env';
 
-
-    if(browser){
-        window.location.assign('/login')
-    }
+	if (browser) {
+		window.location.assign('/home');
+	}
 </script>

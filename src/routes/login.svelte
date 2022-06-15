@@ -83,7 +83,7 @@
 					</li>
 					<li class="mx-3 sm:mx-6">
 						<a
-							href="/"
+							href="/home/about"
 							class="text-sm sm:text-lg font-light text-black hover:border-b-2 hover:border-black hover:pb-4"
 							>About Us</a
 						>
