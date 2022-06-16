@@ -4,7 +4,7 @@
 	export let idDetails = '';
 </script>
 
-<div class="relative overflow-hidden bg-no-repeat bg-bottom md:bg-center w-full md:h-80 h-52">
+<div class="relative overflow-hidden bg-no-repeat bg-bottom md:bg-center w-full md:h-96 h-44">
 	<img src={img} class="" alt="" />
 	<div
 		class="absolute top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed"
