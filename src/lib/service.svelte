@@ -93,29 +93,7 @@
 				</div>
 			</div>
 		</div>
-		<!-- Poetry -->
-		<div class="card md:grid md:grid-cols-2 md:place-items-center md:gap-10">
-			<div>
-				<h3 class="font-bold text-xl md:text-2xl md:pb-5 text-primary">Happivibe Poetry</h3>
-				<div class="text-xs space-y-3 md:text-base md:text-justify">
-					<p>
-						This is a call package that allows our client express their thoughts and emotions
-						through the use of poetry.
-					</p>
-					<p>
-						A client tells us what the message of the poem would be about. Our poetry team then
-						writes a poem around what the client wants. Then, Happivibe makes a call to whom the
-						client wants us to call and we say the poem to the person.
-					</p>
-					<p>
-						It could be to express how much our client loves someone. It could be to cheer up who is
-						going through a rough phase. It could be to celebrate someone on their special day.
-					</p>
-					<p>We write a poem for them and make a call to them, on behalf of our client.</p>
-				</div>
-			</div>
-			<img src="/img/poetry.svg" alt="" />
-		</div>
+
 		<Button link="/login" item="book a call now" />
 	</div>
 
