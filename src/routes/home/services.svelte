@@ -4,6 +4,6 @@
 </script>
 
 <div>
-	<Hero pageID="Our Services" img="/img/services.jpg" />
+	<Hero pageID="Our Services" img="/img/hero/hero2.jpg" />
 	<Service />
 </div>

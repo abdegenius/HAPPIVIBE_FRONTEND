@@ -34,8 +34,8 @@
 				We are the Uber of Happiness
 			</p>
 			<p class="md:text-lg text-xs leading-normal md:mx-36 md:leading-normal">
-				Happivibe service is an online calling service that gives out happiness and the right amount
-				of vibe with just a call from us to you.
+				Happivibe is an online calling service that will make you & your loved ones happy with just
+				one phone call!
 			</p>
 			<a href="/login" class="uppercase bg-primary py-3 px-4 rounded-lg text-white"
 				><button class="mt-10">Book a Call Now</button></a

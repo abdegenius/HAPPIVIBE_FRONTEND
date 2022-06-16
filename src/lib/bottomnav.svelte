@@ -10,10 +10,10 @@
 			<i class="fa-solid fa-handshake fa-xl pb-2 block" />
 			<span class="nav__text">Services</span>
 		</a>
-		<a href="/home/team" class="nav__link">
+		<!-- <a href="/home/team" class="nav__link">
 			<i class="fa-brands fa-teamspeak fa-xl pb-2 block" />
 			<span class="nav__text">Team</span>
-		</a>
+		</a> -->
 		<a href="/home/contact" class="nav__link">
 			<i class="fa-solid fa-message fa-xl pb-2 block" />
 			<span class="nav__text">Contact</span>

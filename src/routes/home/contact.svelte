@@ -3,7 +3,7 @@
 	import Hero from '$lib/hero.svelte';
 </script>
 
-<Hero pageID="Contact Us" />
+<Hero pageID="Contact Us" img="/img/hero/hero4.jpg" />
 
 <!-- ====== Contact Section Start -->
 <ContactCards />

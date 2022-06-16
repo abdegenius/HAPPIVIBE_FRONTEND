@@ -4,7 +4,8 @@ module.exports = {
 		extend: {
 			colors: {
 				'orange-400': '#FFA500',
-				primary: '#FFA500'
+				primary: '#FFA500',
+				secondary: '#FFB732'
 			}
 		}
 	},

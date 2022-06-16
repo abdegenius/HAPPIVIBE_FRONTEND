@@ -34,7 +34,9 @@
 
 		<!-- Stories -->
 		<div class="">
-			<h3 class="md:text-3xl text-xl md:py-4 font-bold mb-5 text-primary md:text-left text-center">
+			<h3
+				class="md:text-3xl text-xl md:py-4 font-bold mt-8 -mb-7 text-primary md:text-left text-center"
+			>
 				See how Happivibe is changing our society
 			</h3>
 			<div class="">
